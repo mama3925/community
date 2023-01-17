@@ -1,6 +1,7 @@
 server:
   port: 80
-
+  servlet:
+    context-path: /community #项目地址
 
 # 数据源名称
 spring:
@@ -53,3 +54,8 @@ logging:
   file:
     name: community.log
 
+
+# community
+community:
+  path:
+    domain: http://localhost:80
