@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.qiuyu.bean.User;
 import com.qiuyu.dao.UserMapper;
+import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.MailClient;
 import org.apache.commons.lang3.StringUtils;
@@ -24,7 +25,7 @@ import java.util.Random;
  */
 
 @Service
-public class UserService {
+public class UserService implements CommunityConstant{
 
     @Autowired
     private UserMapper userMapper;
@@ -103,8 +104,34 @@ public class UserService {
         //发送
         mailClient.sendMail(user.getEmail(), "激活账号", content);
 
-
+        //map为空则注册成功
         return map;
+    }
+
+
+    /**
+     * 激活账号
+     * @param userId
+     * @param activationCode
+     * @return
+     */
+    public int activate(int userId, String activationCode) {
+        //根据userid获取用户信息
+        User user = userMapper.selectById(userId);
+
+        if(user.getStatus() == 1){
+            //已经激活,则返回重复
+            return ACTIVATION_REPEAT;
+        } else if (user.getActivationCode() .equals(activationCode)) {
+            //如果未激活,判断激活码是否相等
+            //激活账号
+            user.setStatus(1);
+            userMapper.updateById(user);
+            return ACTIVATION_SUCCESS;
+        } else {
+            //不相等
+            return ACTIVATION_FAILURE;
+        }
     }
 
 

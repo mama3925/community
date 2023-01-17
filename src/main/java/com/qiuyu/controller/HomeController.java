@@ -10,10 +10,7 @@ import com.qiuyu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,10 +29,9 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @GetMapping("/index")
     public String getIndexPage(Model model,
-                               @RequestParam(name = "currentPage",defaultValue = "1") int currentPage) {
-
+                               @RequestParam(name = "currentPage", defaultValue = "1") int currentPage) {
         //查询到分页的结果
         Page<DiscussPost> page = discussPostService.findDiscussPosts(0, currentPage, 10);
 

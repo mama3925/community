@@ -15,6 +15,7 @@ import javax.mail.internet.MimeMessage;
 /**
  * @author QiuYuSY
  * @create 2023-01-17 16:35
+ * 用于发送邮件
  */
 @Component
 public class MailClient {
