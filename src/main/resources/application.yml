@@ -1,0 +1,37 @@
+server:
+  port: 80
+
+
+# 数据源名称
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3307/community?serverTimezone=UTC
+      username: root
+      password: qiuyu
+      max-active: 15
+      min-idle: 5
+      removeAbandonedTimeout: 120 # 2分钟
+
+  thymeleaf:
+    cache: false #关闭缓存
+    check-template-location: false
+
+mybatis-plus:
+  mapper-locations: "classpath*:/mapper/**/*.xml" #加载mapper
+  type-aliases-package: "com.qiuyu.bean" #别名
+  configuration:
+    use-generated-keys: true
+    map-underscore-to-camel-case: true  #驼峰映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志
+  global-config:
+    db-config:
+      id-type: auto #id自增
+
+#logger
+logging:
+  level:
+    com.qiuyu: debug
+  file:
+    name: community.log

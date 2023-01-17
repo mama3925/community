@@ -1,0 +1,60 @@
+2023-01-17 15:33:45.935  INFO 16644 --- [main] com.qiuyu.LoggerTest                     : Starting LoggerTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 16644 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-17 15:33:45.936 DEBUG 16644 --- [main] com.qiuyu.LoggerTest                     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-17 15:33:45.937  INFO 16644 --- [main] com.qiuyu.LoggerTest                     : No active profile set, falling back to 1 default profile: "default"
+2023-01-17 15:33:46.536  INFO 16644 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-17 15:33:46.671  INFO 16644 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-17 15:33:47.548  INFO 16644 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-17 15:33:47.836  INFO 16644 --- [main] com.qiuyu.LoggerTest                     : Started LoggerTest in 2.135 seconds (JVM running for 2.643)
+2023-01-17 15:33:47.956 DEBUG 16644 --- [main] com.qiuyu.LoggerTest                     : debug
+2023-01-17 15:33:47.956  INFO 16644 --- [main] com.qiuyu.LoggerTest                     : info
+2023-01-17 15:33:47.956  WARN 16644 --- [main] com.qiuyu.LoggerTest                     : warn
+2023-01-17 15:33:47.956 ERROR 16644 --- [main] com.qiuyu.LoggerTest                     : error
+2023-01-17 15:33:47.963  INFO 16644 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-17 15:33:47.964  INFO 16644 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-17 15:37:37.190  INFO 1720 --- [main] com.qiuyu.LoggerTest                     : Starting LoggerTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 1720 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-17 15:37:37.191 DEBUG 1720 --- [main] com.qiuyu.LoggerTest                     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-17 15:37:37.192  INFO 1720 --- [main] com.qiuyu.LoggerTest                     : No active profile set, falling back to 1 default profile: "default"
+2023-01-17 15:37:37.850  INFO 1720 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-17 15:37:37.986  INFO 1720 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-17 15:37:38.834  INFO 1720 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-17 15:37:39.105  INFO 1720 --- [main] com.qiuyu.LoggerTest                     : Started LoggerTest in 2.148 seconds (JVM running for 2.677)
+2023-01-17 15:37:39.233 DEBUG 1720 --- [main] com.qiuyu.LoggerTest                     : debug
+2023-01-17 15:37:39.234  INFO 1720 --- [main] com.qiuyu.LoggerTest                     : info
+2023-01-17 15:37:39.234  WARN 1720 --- [main] com.qiuyu.LoggerTest                     : warn
+2023-01-17 15:37:39.234 ERROR 1720 --- [main] com.qiuyu.LoggerTest                     : error
+2023-01-17 15:37:39.241  INFO 1720 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-17 15:37:39.242  INFO 1720 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-17 15:41:36.306  INFO 7672 --- [main] com.qiuyu.LoggerTest                     : Starting LoggerTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 7672 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-17 15:41:36.307 DEBUG 7672 --- [main] com.qiuyu.LoggerTest                     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-17 15:41:36.308  INFO 7672 --- [main] com.qiuyu.LoggerTest                     : No active profile set, falling back to 1 default profile: "default"
+2023-01-17 15:41:36.923  INFO 7672 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-17 15:41:37.090  INFO 7672 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-17 15:41:37.918  INFO 7672 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-17 15:41:38.208  INFO 7672 --- [main] com.qiuyu.LoggerTest                     : Started LoggerTest in 2.139 seconds (JVM running for 2.692)
+2023-01-17 15:41:38.337 DEBUG 7672 --- [main] com.qiuyu.LoggerTest                     : debug
+2023-01-17 15:41:38.337  INFO 7672 --- [main] com.qiuyu.LoggerTest                     : info
+2023-01-17 15:41:38.337  WARN 7672 --- [main] com.qiuyu.LoggerTest                     : warn
+2023-01-17 15:41:38.337 ERROR 7672 --- [main] com.qiuyu.LoggerTest                     : error
+2023-01-17 15:41:38.344  INFO 7672 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-17 15:41:38.345  INFO 7672 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-17 15:42:42.793  INFO 7132 --- [main] com.qiuyu.service.UserServiceTest        : Starting UserServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 7132 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-17 15:42:42.794 DEBUG 7132 --- [main] com.qiuyu.service.UserServiceTest        : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-17 15:42:42.794  INFO 7132 --- [main] com.qiuyu.service.UserServiceTest        : No active profile set, falling back to 1 default profile: "default"
+2023-01-17 15:42:43.401  INFO 7132 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-17 15:42:43.553  INFO 7132 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-17 15:42:44.358  INFO 7132 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-17 15:42:44.605  INFO 7132 --- [main] com.qiuyu.service.UserServiceTest        : Started UserServiceTest in 2.066 seconds (JVM running for 2.588)
+2023-01-17 15:42:45.361 DEBUG 7132 --- [main] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-17 15:42:45.376 DEBUG 7132 --- [main] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 101(Integer)
+2023-01-17 15:42:45.391 DEBUG 7132 --- [main] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-17 15:42:45.399  INFO 7132 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-17 15:42:45.402  INFO 7132 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-17 15:43:15.680  INFO 6864 --- [main] com.qiuyu.service.UserServiceTest        : Starting UserServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 6864 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-17 15:43:15.681 DEBUG 6864 --- [main] com.qiuyu.service.UserServiceTest        : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-17 15:43:15.681  INFO 6864 --- [main] com.qiuyu.service.UserServiceTest        : No active profile set, falling back to 1 default profile: "default"
+2023-01-17 15:43:16.277  INFO 6864 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-17 15:43:16.413  INFO 6864 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-17 15:43:17.251  INFO 6864 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-17 15:43:17.532  INFO 6864 --- [main] com.qiuyu.service.UserServiceTest        : Started UserServiceTest in 2.072 seconds (JVM running for 2.59)
+2023-01-17 15:43:18.347  INFO 6864 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-17 15:43:18.350  INFO 6864 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
