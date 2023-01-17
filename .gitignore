@@ -33,3 +33,8 @@ build/
 
 ### log ###
 .log
+
+
+### mvnw ###
+mvnw
+mvnw.cmd
