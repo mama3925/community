@@ -14,6 +14,23 @@ spring:
       min-idle: 5
       removeAbandonedTimeout: 120 # 2分钟
 
+  # 邮箱
+  mail:
+    #配置邮件消息
+    host: smtp.qq.com
+    port: 465
+    #发送邮件者信箱（也就是你申请POP3/SMTP服务的QQ号）
+    username: 2448567284@qq.com
+    #申请PO3/SMTP服务时，给我们的邮箱的授权码
+    password: jzzyzfazhsardhgh
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail.smtp.ssl.enable: true
+
+
+
+  #t hymeleaf模板
   thymeleaf:
     cache: false #关闭缓存
     check-template-location: false
@@ -35,3 +52,4 @@ logging:
     com.qiuyu: debug
   file:
     name: community.log
+
