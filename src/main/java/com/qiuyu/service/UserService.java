@@ -28,7 +28,7 @@ import java.util.Random;
  */
 
 @Service
-public class UserService implements CommunityConstant{
+public class UserService implements CommunityConstant {
 
     @Autowired
     private UserMapper userMapper;
@@ -50,45 +50,46 @@ public class UserService implements CommunityConstant{
 
     /**
      * 注册账号
+     *
      * @param user
      * @return
      */
-    public Map<String,Object> register(User user){
-        Map<String,Object> map = new HashMap<>();
+    public Map<String, Object> register(User user) {
+        Map<String, Object> map = new HashMap<>();
 
         //空值处理
         if (user == null) {
             throw new IllegalArgumentException("参数不能为空");
         }
-        if(StringUtils.isBlank(user.getUsername())){
+        if (StringUtils.isBlank(user.getUsername())) {
             map.put("usernameMsg", "账号不能为空");
             return map;
         }
-        if(StringUtils.isBlank(user.getPassword())){
+        if (StringUtils.isBlank(user.getPassword())) {
             map.put("passwordMsg", "密码不能为空");
             return map;
         }
-        if(StringUtils.isBlank(user.getEmail())){
+        if (StringUtils.isBlank(user.getEmail())) {
             map.put("emailMsg", "邮箱不能为空");
             return map;
         }
 
         //判断账号是否被注册
         Integer integer = userMapper.selectCount(new LambdaQueryWrapper<User>().eq(User::getUsername, user.getUsername()));
-        if(integer > 0){
+        if (integer > 0) {
             map.put("usernameMsg", "该账号已被注册");
             return map;
         }
         //判断邮箱是否被注册
         integer = userMapper.selectCount(new LambdaQueryWrapper<User>().eq(User::getEmail, user.getEmail()));
-        if(integer > 0){
+        if (integer > 0) {
             map.put("emailMsg", "该邮箱已被注册");
             return map;
         }
 
 
         //给用户加盐
-        user.setSalt(CommunityUtil.generateUUID().substring(0,5));
+        user.setSalt(CommunityUtil.generateUUID().substring(0, 5));
         //加密
         user.setPassword(CommunityUtil.md5(user.getPassword() + user.getSalt()));
         //初始化其他数据
@@ -106,7 +107,7 @@ public class UserService implements CommunityConstant{
         Context context = new Context();
         context.setVariable("email", user.getEmail());
         //http://localhost:8080/community/activation/101/code 激活链接
-        String url = domain + contextPath + "/activation/"+ user.getId()+"/" + user.getActivationCode();
+        String url = domain + contextPath + "/activation/" + user.getId() + "/" + user.getActivationCode();
         context.setVariable("url", url);
 
         //根据模板,放入数据
@@ -121,6 +122,7 @@ public class UserService implements CommunityConstant{
 
     /**
      * 激活账号
+     *
      * @param userId
      * @param activationCode
      * @return
@@ -129,10 +131,10 @@ public class UserService implements CommunityConstant{
         //根据userid获取用户信息
         User user = userMapper.selectById(userId);
 
-        if(user.getStatus() == 1){
+        if (user.getStatus() == 1) {
             //已经激活,则返回重复
             return ACTIVATION_REPEAT;
-        } else if (user.getActivationCode() .equals(activationCode)) {
+        } else if (user.getActivationCode().equals(activationCode)) {
             //如果未激活,判断激活码是否相等
             //激活账号
             user.setStatus(1);
@@ -146,25 +148,83 @@ public class UserService implements CommunityConstant{
 
 
     /**
-     *  登出
+     * 登出
+     *
      * @param ticket 登录凭证
      */
-    public void logout(String ticket){
+    public void logout(String ticket) {
         LoginTicket loginTicket = new LoginTicket();
         loginTicket.setStatus(1);
         loginTicketMapper.update(loginTicket,
-                new LambdaUpdateWrapper<LoginTicket>().eq(LoginTicket::getTicket,ticket));
+                new LambdaUpdateWrapper<LoginTicket>().eq(LoginTicket::getTicket, ticket));
     }
 
     /**
      * 通过凭证号找到凭证
+     *
      * @param ticket
      * @return
      */
-    public LoginTicket findLoginTicket(String ticket){
+    public LoginTicket findLoginTicket(String ticket) {
         return loginTicketMapper.selectOne(new LambdaQueryWrapper<LoginTicket>()
                 .eq(LoginTicket::getTicket, ticket));
 
+    }
+
+    /**
+     * 更新用户头像路径
+     *
+     * @param userId
+     * @param headerUrl
+     * @return
+     */
+    public int updateHeaderUrl(int userId, String headerUrl) {
+        User user = new User();
+        user.setId(userId);
+        user.setHeaderUrl(headerUrl);
+        return userMapper.updateById(user);
+    }
+
+    /**
+     * 更新密码
+     * @param userId
+     * @param oldPassword
+     * @param newPassword
+     * @return map返回信息
+     */
+    public Map<String, Object> updatePassword(int userId, String oldPassword,
+                                              String newPassword) {
+        Map<String, Object> map = new HashMap<>();
+
+        //空值判断
+        if(StringUtils.isBlank(oldPassword)){
+            map.put("oldPasswordMsg","原密码不能为空");
+            return map;
+        }
+        if(StringUtils.isBlank(newPassword)){
+            map.put("newPasswordMsg","新密码不能为空");
+            return map;
+        }
+
+        //根据userId获取对象
+        User user = userMapper.selectById(userId);
+        //旧密码加盐，加密
+        oldPassword = CommunityUtil.md5(oldPassword+user.getSalt());
+        //判断密码是否相等
+        if(!user.getPassword().equals(oldPassword)){
+            //不相等,返回
+            map.put("oldPasswordMsg","原密码错误");
+            return map;
+        }
+
+        //新密码加盐,加密
+        newPassword = CommunityUtil.md5(newPassword+user.getSalt());
+
+        user.setPassword(newPassword);
+        userMapper.updateById(user);
+
+        //map为空表示修改成功
+        return map;
     }
 
 }

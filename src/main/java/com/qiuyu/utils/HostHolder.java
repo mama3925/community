@@ -4,7 +4,8 @@ import com.qiuyu.bean.User;
 import org.springframework.stereotype.Component;
 
 /**
- * 持有用户信息,代替session对象
+ * 持有用户信息,代替session对象,使用ThreadLocal保证了线程隔离
+ * 获得当前登录的用户的信息
  */
 @Component  //放入容器里不用设为静态方法
 public class HostHolder {

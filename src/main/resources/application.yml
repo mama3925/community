@@ -59,4 +59,4 @@ logging:
 community:
   path:
     domain: http://localhost:80
-    upload: D:/MyCode/IDEA/demo/upload
+    upload-path: D:/MyCode/IDEA/demo/upload

@@ -1,6 +1,7 @@
 package com.qiuyu.controller;
 
 import com.google.code.kaptcha.Producer;
+import com.qiuyu.annotation.LoginRequired;
 import com.qiuyu.bean.User;
 import com.qiuyu.service.LoginService;
 import com.qiuyu.service.UserService;

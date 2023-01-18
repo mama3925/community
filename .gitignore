@@ -39,3 +39,7 @@ build/
 mvnw
 mvnw.cmd
 /.mvn
+
+
+###community###
+/upload/
