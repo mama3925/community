@@ -2,7 +2,10 @@ package com.qiuyu.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.qiuyu.bean.LoginTicket;
 import com.qiuyu.bean.User;
+import com.qiuyu.dao.LoginTicketMapper;
 import com.qiuyu.dao.UserMapper;
 import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
@@ -30,6 +33,8 @@ public class UserService implements CommunityConstant{
     @Autowired
     private UserMapper userMapper;
     @Autowired
+    private LoginTicketMapper loginTicketMapper;
+    @Autowired
     private MailClient mailClient; //邮件客户端
     @Autowired
     private TemplateEngine templateEngine; //模板引擎
@@ -43,6 +48,11 @@ public class UserService implements CommunityConstant{
         return userMapper.selectById(Integer.parseInt(id));
     }
 
+    /**
+     * 注册账号
+     * @param user
+     * @return
+     */
     public Map<String,Object> register(User user){
         Map<String,Object> map = new HashMap<>();
 
@@ -134,5 +144,27 @@ public class UserService implements CommunityConstant{
         }
     }
 
+
+    /**
+     *  登出
+     * @param ticket 登录凭证
+     */
+    public void logout(String ticket){
+        LoginTicket loginTicket = new LoginTicket();
+        loginTicket.setStatus(1);
+        loginTicketMapper.update(loginTicket,
+                new LambdaUpdateWrapper<LoginTicket>().eq(LoginTicket::getTicket,ticket));
+    }
+
+    /**
+     * 通过凭证号找到凭证
+     * @param ticket
+     * @return
+     */
+    public LoginTicket findLoginTicket(String ticket){
+        return loginTicketMapper.selectOne(new LambdaQueryWrapper<LoginTicket>()
+                .eq(LoginTicket::getTicket, ticket));
+
+    }
 
 }

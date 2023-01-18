@@ -41,4 +41,10 @@ public class UserServiceTest {
         System.out.println(map);
     }
 
+    @Test
+    public void testLoginOut(){
+        String ticket = "9973d00c2c104d119c67539e2d5ccb6f";
+        userService.logout(ticket);
+    }
+
 }

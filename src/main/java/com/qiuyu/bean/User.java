@@ -14,7 +14,6 @@ import java.util.Date;
 public class User {
     private Integer id;
     private String username;
-    @TableField(select = false)
     private String password;
     private String salt;
     private String email;

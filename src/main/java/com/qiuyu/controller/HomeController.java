@@ -3,7 +3,6 @@ package com.qiuyu.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.bean.DiscussPost;
-import com.qiuyu.bean.MyPage;
 import com.qiuyu.bean.User;
 import com.qiuyu.service.DiscussPostService;
 import com.qiuyu.service.UserService;

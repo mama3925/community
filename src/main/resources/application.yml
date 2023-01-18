@@ -8,7 +8,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3307/community?serverTimezone=UTC
+      url: jdbc:mysql://localhost:3307/community?serverTimezone=Asia/Shanghai
       username: root
       password: qiuyu
       max-active: 15
@@ -42,7 +42,7 @@ mybatis-plus:
   configuration:
     use-generated-keys: true
     map-underscore-to-camel-case: true  #驼峰映射
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #日志
   global-config:
     db-config:
       id-type: auto #id自增
@@ -59,3 +59,4 @@ logging:
 community:
   path:
     domain: http://localhost:80
+    upload: D:/MyCode/IDEA/demo/upload
