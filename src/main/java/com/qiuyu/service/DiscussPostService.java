@@ -27,12 +27,10 @@ public class DiscussPostService {
     /**
      * 查询不是被拉黑的帖子,并且userId不为0按照type排序
      * @param userId
-     * @param currentPage
-     * @param pageSize
+     * @Param page
      * @return
      */
-    public Page<DiscussPost> findDiscussPosts(int userId, int currentPage, int pageSize) {
-        Page<DiscussPost> page = new Page<>(currentPage, pageSize);
+    public IPage<DiscussPost> findDiscussPosts(int userId, IPage<DiscussPost> page) {
         LambdaQueryWrapper<DiscussPost> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper
                 .ne(DiscussPost::getStatus, 2)

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.annotation.LoginRequired;
 import com.qiuyu.bean.Comment;
 import com.qiuyu.bean.DiscussPost;
+import com.qiuyu.bean.MyPage;
 import com.qiuyu.bean.User;
 import com.qiuyu.service.CommentService;
 import com.qiuyu.service.DiscussPostService;
@@ -85,7 +86,7 @@ public class DiscussPostController implements CommunityConstant {
      * @return
      */
     @GetMapping( "/detail/{discussPostId}")
-    public String getDiscussPost(@PathVariable("discussPostId") int discussPostId, Model model, Page<Comment> page){
+    public String getDiscussPost(@PathVariable("discussPostId") int discussPostId, Model model, MyPage<Comment> page){
         //通过前端传来的Id查询帖子
         DiscussPost post = discussPostService.findDiscussPostById(discussPostId);
         model.addAttribute("post",post);
@@ -96,8 +97,8 @@ public class DiscussPostController implements CommunityConstant {
 
         //得到帖子的评论
         page.setSize(5);
-        page.setCurrent(1);
-        page = (Page<Comment>) commentService.findCommentsByEntity(ENTITY_TYPE_POST, post.getId(), page);
+        page.setPath("/discuss/detail/"+discussPostId);
+        page = (MyPage<Comment>) commentService.findCommentsByEntity(ENTITY_TYPE_POST, post.getId(), page);
         //评论列表
         List<Comment> commentList = page.getRecords();
 
@@ -167,6 +168,7 @@ public class DiscussPostController implements CommunityConstant {
 //        }
 
         model.addAttribute("comments",commentVoList);
+        model.addAttribute("page",page);
 
         return "/site/discuss-detail";
     }

@@ -142,25 +142,26 @@
 					</li>
 				</ul>
 
+
 				<!-- 分页 -->
-				<nav class="mt-5" th:if="${page.pages > 1}">
+				<nav class="mt-5" th:if="${page.pages > 1}" th:fragment="pagination">
 					<ul class="pagination justify-content-center">
 						<li class="page-item">
-							<a class="page-link" th:href="@{/index(currentPage=1)}">首页</a>
+							<a class="page-link" th:href="@{${page.path}(current=1)}">首页</a>
 						</li>
 						<li th:class="|page-item ${page.current==1?'disabled':''}|">
-							<a class="page-link"  th:href="@{/index(currentPage=${page.current}-1)}">上一页</a>
+							<a class="page-link"  th:href="@{${page.path}(current=${page.current}-1)}">上一页</a>
 						</li>
 
 						<li th:class="|page-item ${i==page.current?'active':''}|" th:each="i:${#numbers.sequence(page.current-2,page.current+2)}">
-							<a class="page-link" th:href="@{/index(currentPage=${i})}" th:text="${i}" th:if="${i} > 0 and ${i} <= ${page.pages} "></a>
+							<a class="page-link" th:href="@{${page.path}(current=${i})}" th:text="${i}" th:if="${i} > 0 and ${i} <= ${page.pages} "></a>
 						</li>
 
 						<li class="page-item" th:class="|page-item ${page.current==page.pages?'disabled':''}|">
-							<a class="page-link" th:href="@{/index(currentPage=${page.current}+1)}">下一页</a>
+							<a class="page-link" th:href="@{${page.path}(current=${page.current}+1)}">下一页</a>
 						</li>
 						<li class="page-item">
-							<a class="page-link" th:href="@{/index(currentPage=${page.pages})}">末页</a>
+							<a class="page-link" th:href="@{${page.path}(current=${page.pages})}">末页</a>
 						</li>
 					</ul>
 				</nav>

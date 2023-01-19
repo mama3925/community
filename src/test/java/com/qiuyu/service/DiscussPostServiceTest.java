@@ -1,6 +1,7 @@
 package com.qiuyu.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.bean.DiscussPost;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,10 +22,12 @@ public class DiscussPostServiceTest {
     @Test
     public void testFindDiscussPosts(){
         int userId = 101;
-        int currentPage = 1;
-        int pageSize = 5;
 
-        IPage<DiscussPost> page = discussPostService.findDiscussPosts(userId, currentPage, pageSize);
+        Page<DiscussPost> page = new Page<>();
+        page.setSize(5);
+        page.setCurrent(1);
+
+        page = (Page<DiscussPost>) discussPostService.findDiscussPosts(userId, page);
         List<DiscussPost> discussPosts = page.getRecords();
         discussPosts.forEach(System.out::println);
     }
