@@ -98,17 +98,75 @@ public class DiscussPostController implements CommunityConstant {
         page.setSize(5);
         page.setCurrent(1);
         page = (Page<Comment>) commentService.findCommentsByEntity(ENTITY_TYPE_POST, post.getId(), page);
+        //评论列表
+        List<Comment> commentList = page.getRecords();
 
-
-        //ViewObject给前端展示数据用
+        // 评论: 给帖子的评论
+        // 回复: 给评论的评论
+        // 评论VO(viewObject)列表 (将comment,user信息封装到每一个Map，每一个Map再封装到一个List中)
         List<Map<String,Object>> commentVoList = new ArrayList<>();
-        for (Comment comment : page.getRecords()) {
-            Map<String, Object> map = new HashMap<>(15);
-            map.put("comment",comment);
-            map.put("user",userService.findUserById(comment.getUserId().toString()));
+        if(commentList != null){
+            for (Comment comment : commentList) {
+                //一条评论的VO
+                Map<String, Object> commentVo = new HashMap<>(10);
+                //评论
+                commentVo.put("comment",comment);
+                //评论作者
+                commentVo.put("user",userService.findUserById(comment.getUserId().toString()));
+
+                //回复
+                Page<Comment> replyPage = new Page<>();
+                replyPage.setCurrent(1);
+                replyPage.setSize(Integer.MAX_VALUE);
+                replyPage = (Page<Comment>) commentService.findCommentsByEntity(ENTITY_TYPE_COMMENT, comment.getId(), replyPage);
+                //回复列表
+                List<Comment> replyList = replyPage.getRecords();
+                //回复的VO列表
+                List<Map<String,Object>> replyVoList = new ArrayList<>();
+                if(replyList != null){
+                    for (Comment reply : replyList) {
+                        //一条回复的VO
+                        Map<String, Object> replyVo = new HashMap<>(10);
+                        //回复
+                        replyVo.put("reply",reply);
+                        //作者
+                        replyVo.put("user",user);
+                        //回复的目标
+                        User target = reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId().toString());
+                        replyVo.put("target",target);
+
+                        replyVoList.add(replyVo);
+                    }
+                }
+
+                //回复列表放入评论
+                commentVo.put("reply",replyVoList);
+
+                //评论的回复数量
+                int replyCount = commentService.findCommentCount(ENTITY_TYPE_COMMENT, comment.getId());
+                commentVo.put("replyCount",replyCount);
+
+
+                commentVoList.add(commentVo);
+            }
         }
 
+//        for (Map<String, Object> commentVo : commentVoList) {
+//            Comment comment = (Comment) commentVo.get("comment");
+//            User user1 = (User) commentVo.get("user");
+//            int replyCount = (int) commentVo.get("replyCount");
+//            ArrayList<Map<String,Object>> replyVoList = (ArrayList<Map<String, Object>>) commentVo.get("reply");
+//            System.out.println("作者:"+user1.getUsername()+" 回复数:"+replyCount+" 内容:"+comment.getContent());
+//
+//            for (Map<String, Object> replyVo : replyVoList) {
+//                Comment reply = (Comment) replyVo.get("reply");
+//                User user2 = (User) replyVo.get("user");
+//
+//                System.out.println("\t作者:"+user2.getUsername()+" 内容:"+reply.getContent());
+//            }
+//        }
 
+        model.addAttribute("comments",commentVoList);
 
         return "/site/discuss-detail";
     }

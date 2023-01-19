@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author QiuYuSY
@@ -19,8 +21,8 @@ public class Comment {
     private Integer userId;
     private Integer entityType; //目标类型
     private Integer entityId; //目标Id
-    private Integer targetId; //回复时目标Id
+    private Integer targetId; //回复时目标用户ID
     private String content;
     private Integer status;
-    private Date CreateTime;
+    private Date createTime;
 }

@@ -23,7 +23,7 @@ class CommentServiceTest {
 
     @Test
     void findCommentsByEntity() {
-        IPage<Comment> page = new Page<>(1, 2);
+        IPage<Comment> page = new Page<>(1, Integer.MAX_VALUE);
         page = commentService.findCommentsByEntity(1, 228, page);
         System.out.println(page.getRecords());
         System.out.println(page.getTotal());
