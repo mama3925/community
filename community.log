@@ -1,0 +1,594 @@
+2023-01-20 00:32:26.891  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (3 additions, 0 deletions, 0 modifications)
+2023-01-20 00:32:27.092  INFO 17616 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:32:27.095  INFO 17616 --- [Thread-8] o.a.c.c.C.[.[localhost].[/community]     : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-01-20 00:32:27.114  INFO 17616 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:32:27.123  INFO 17616 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:32:27.272  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:32:27.273 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:32:27.273  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:32:27.456  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:32:27.456  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:32:27.456  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:32:27.456  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:32:27.456  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:32:27.457  INFO 17616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:32:27.457  INFO 17616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:32:27.469  INFO 17616 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:32:27.469  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 194 ms
+2023-01-20 00:32:27.489  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:32:27.507  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-01-20 00:32:27.769  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:32:27.778  INFO 17448 --- [main] com.qiuyu.service.CommentServiceTest     : Starting CommentServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17448 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:32:27.779 DEBUG 17448 --- [main] com.qiuyu.service.CommentServiceTest     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:32:27.779  INFO 17448 --- [main] com.qiuyu.service.CommentServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:32:27.801  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:32:27.809  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:32:27.812  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.562 seconds (JVM running for 7693.927)
+2023-01-20 00:32:27.813  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:32:28.418  INFO 17448 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:32:28.583  INFO 17448 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:32:29.214  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-01-20 00:32:29.382  INFO 17616 --- [Thread-14] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:32:29.388  INFO 17616 --- [Thread-14] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-01-20 00:32:29.389  INFO 17616 --- [Thread-14] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-01-20 00:32:29.519  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:32:29.519 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:32:29.519  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:32:29.529  INFO 17448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:32:29.686  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:32:29.686  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:32:29.686  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:32:29.686  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:32:29.686  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:32:29.687  INFO 17616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:32:29.687  INFO 17616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:32:29.705  INFO 17616 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:32:29.705  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 184 ms
+2023-01-20 00:32:29.730  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:32:29.749  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-01-20 00:32:29.804  INFO 17448 --- [main] com.qiuyu.service.CommentServiceTest     : Started CommentServiceTest in 2.259 seconds (JVM running for 2.93)
+2023-01-20 00:32:30.031  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:32:30.064  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:32:30.077  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:32:30.081  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.582 seconds (JVM running for 7696.195)
+2023-01-20 00:32:30.082  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:32:30.722 DEBUG 17448 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 00:32:30.738 DEBUG 17448 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 228(Integer)
+2023-01-20 00:32:30.766 DEBUG 17448 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 00:32:30.771 DEBUG 17448 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==>  Preparing: SELECT id,user_id,entity_type,entity_id,target_id,content,status,create_time FROM comment WHERE (entity_type = ? AND entity_id = ?) LIMIT ?
+2023-01-20 00:32:30.771 DEBUG 17448 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==> Parameters: 1(Integer), 228(Integer), 10(Long)
+2023-01-20 00:32:30.776 DEBUG 17448 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : <==      Total: 9
+2023-01-20 00:32:30.790  INFO 17448 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:32:30.792  INFO 17448 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:33:12.720  INFO 18352 --- [main] com.qiuyu.service.CommentServiceTest     : Starting CommentServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 18352 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:33:12.721 DEBUG 18352 --- [main] com.qiuyu.service.CommentServiceTest     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:33:12.721  INFO 18352 --- [main] com.qiuyu.service.CommentServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:33:13.361  INFO 18352 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:33:13.543  INFO 18352 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:33:14.446  INFO 18352 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:33:14.715  INFO 18352 --- [main] com.qiuyu.service.CommentServiceTest     : Started CommentServiceTest in 2.252 seconds (JVM running for 2.897)
+2023-01-20 00:33:15.636 DEBUG 18352 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 00:33:15.661 DEBUG 18352 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 228(Integer)
+2023-01-20 00:33:15.676 DEBUG 18352 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 00:33:15.680 DEBUG 18352 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==>  Preparing: SELECT id,user_id,entity_type,entity_id,target_id,content,status,create_time FROM comment WHERE (entity_type = ? AND entity_id = ?) LIMIT ?
+2023-01-20 00:33:15.681 DEBUG 18352 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==> Parameters: 1(Integer), 228(Integer), 10(Long)
+2023-01-20 00:33:15.685 DEBUG 18352 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : <==      Total: 9
+2023-01-20 00:33:15.698  INFO 18352 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:33:15.700  INFO 18352 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:41:38.228  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2023-01-20 00:41:38.449  INFO 17616 --- [Thread-18] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:41:38.454  INFO 17616 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
+2023-01-20 00:41:38.454  INFO 17616 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2023-01-20 00:41:38.575  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:41:38.575 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:41:38.575  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:41:38.709  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:41:38.709  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:41:38.709  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:41:38.710  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:41:38.710  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:41:38.710  INFO 17616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:41:38.710  INFO 17616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:41:38.723  INFO 17616 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:41:38.723  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 146 ms
+2023-01-20 00:41:38.740  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:41:38.757  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2023-01-20 00:41:38.986  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:41:39.006  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:41:39.022  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:41:39.025  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.465 seconds (JVM running for 8245.14)
+2023-01-20 00:41:39.025  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:41:40.417  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (2 additions, 1 deletion, 0 modifications)
+2023-01-20 00:41:40.597  INFO 17616 --- [Thread-22] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:41:40.602  INFO 17616 --- [Thread-22] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closing ...
+2023-01-20 00:41:40.602  INFO 17616 --- [Thread-22] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2023-01-20 00:41:40.692  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:41:40.692 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:41:40.693  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:41:40.809  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:41:40.810  INFO 17616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:41:40.823  INFO 17616 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:41:40.823  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 129 ms
+2023-01-20 00:41:40.841  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:41:40.857  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2023-01-20 00:41:41.104  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:41:41.127  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:41:41.134  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:41:41.137  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.459 seconds (JVM running for 8247.251)
+2023-01-20 00:41:41.138  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:41:41.184  INFO 8736 --- [main] com.qiuyu.service.CommentServiceTest     : Starting CommentServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 8736 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:41:41.185 DEBUG 8736 --- [main] com.qiuyu.service.CommentServiceTest     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:41:41.185  INFO 8736 --- [main] com.qiuyu.service.CommentServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:41:41.820  INFO 8736 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:41:41.976  INFO 8736 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:41:42.537  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-01-20 00:41:42.722  INFO 17616 --- [Thread-26] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:41:42.726  INFO 17616 --- [Thread-26] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closing ...
+2023-01-20 00:41:42.726  INFO 17616 --- [Thread-26] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closed
+2023-01-20 00:41:42.819  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:41:42.819 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:41:42.820  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:41:42.915  INFO 8736 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:41:42.954  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:41:42.954  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:41:42.954  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:41:42.954  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:41:42.955  INFO 17616 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:41:42.955  INFO 17616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:41:42.955  INFO 17616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:41:42.974  INFO 17616 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:41:42.974  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 153 ms
+2023-01-20 00:41:42.999  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:41:43.016  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} inited
+2023-01-20 00:41:43.165  INFO 8736 --- [main] com.qiuyu.service.CommentServiceTest     : Started CommentServiceTest in 2.22 seconds (JVM running for 2.872)
+2023-01-20 00:41:43.269  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:41:43.294  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:41:43.302  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:41:43.305  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.505 seconds (JVM running for 8249.419)
+2023-01-20 00:41:43.306  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:41:44.089 DEBUG 8736 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 00:41:44.105 DEBUG 8736 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 228(Integer)
+2023-01-20 00:41:44.129 DEBUG 8736 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 00:41:44.133 DEBUG 8736 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==>  Preparing: SELECT id,user_id,entity_type,entity_id,target_id,content,status,create_time FROM comment WHERE (entity_type = ? AND entity_id = ?) LIMIT ?
+2023-01-20 00:41:44.134 DEBUG 8736 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==> Parameters: 1(Integer), 228(Integer), 5(Long)
+2023-01-20 00:41:44.137 DEBUG 8736 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : <==      Total: 5
+2023-01-20 00:41:44.150  INFO 8736 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:41:44.153  INFO 8736 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:42:01.544  INFO 16664 --- [main] com.qiuyu.service.CommentServiceTest     : Starting CommentServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 16664 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:42:01.545 DEBUG 16664 --- [main] com.qiuyu.service.CommentServiceTest     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:42:01.546  INFO 16664 --- [main] com.qiuyu.service.CommentServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:42:02.171  INFO 16664 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:42:02.331  INFO 16664 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:42:03.230  INFO 16664 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:42:03.451  INFO 16664 --- [main] com.qiuyu.service.CommentServiceTest     : Started CommentServiceTest in 2.132 seconds (JVM running for 2.76)
+2023-01-20 00:42:04.338 DEBUG 16664 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 00:42:04.354 DEBUG 16664 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 228(Integer)
+2023-01-20 00:42:04.377 DEBUG 16664 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 00:42:04.381 DEBUG 16664 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==>  Preparing: SELECT id,user_id,entity_type,entity_id,target_id,content,status,create_time FROM comment WHERE (entity_type = ? AND entity_id = ?) LIMIT ?
+2023-01-20 00:42:04.382 DEBUG 16664 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==> Parameters: 1(Integer), 228(Integer), 2(Long)
+2023-01-20 00:42:04.384 DEBUG 16664 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : <==      Total: 2
+2023-01-20 00:42:04.398  INFO 16664 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:42:04.401  INFO 16664 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:58:23.764  INFO 17616 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
+2023-01-20 00:58:23.922  INFO 17616 --- [Thread-30] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-01-20 00:58:23.927  INFO 17616 --- [Thread-30] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closing ...
+2023-01-20 00:58:23.927  INFO 17616 --- [Thread-30] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closed
+2023-01-20 00:58:24.008  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:58:24.008 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:58:24.008  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:58:24.019  WARN 17616 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.qiuyu.CommunityApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/qiuyu/utils/CommunityConstant.class] cannot be opened because it does not exist
+2023-01-20 00:58:24.072 ERROR 17616 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.qiuyu.CommunityApplication]; nested exception is java.io.FileNotFoundException: class path resource [com/qiuyu/utils/CommunityConstant.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) [spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) [spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) [spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) [spring-boot-2.7.6.jar:2.7.6]
+	at com.qiuyu.CommunityApplication.main(CommunityApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_321]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_321]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_321]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_321]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.7.6.jar:2.7.6]
+Caused by: java.io.FileNotFoundException: class path resource [com/qiuyu/utils/CommunityConstant.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:199) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:55) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:696) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1024) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:385) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:331) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:303) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174) ~[spring-context-5.3.24.jar:5.3.24]
+	... 18 common frames omitted
+
+2023-01-20 00:58:25.501  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 17616 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:58:25.502 DEBUG 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:58:25.502  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:58:25.538  INFO 10432 --- [main] com.qiuyu.service.CommentServiceTest     : Starting CommentServiceTest using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 10432 (started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:58:25.538 DEBUG 10432 --- [main] com.qiuyu.service.CommentServiceTest     : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:58:25.539  INFO 10432 --- [main] com.qiuyu.service.CommentServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:58:25.644  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:58:25.660  INFO 17616 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 158 ms
+2023-01-20 00:58:25.677  INFO 17616 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:58:25.694  INFO 17616 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} inited
+2023-01-20 00:58:25.966  INFO 17616 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:58:25.989  INFO 17616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:58:25.997  INFO 17616 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:58:26.000  INFO 17616 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 0.51 seconds (JVM running for 9252.114)
+2023-01-20 00:58:26.001  INFO 17616 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-01-20 00:58:26.168  INFO 17616 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closing ...
+2023-01-20 00:58:26.168  INFO 17616 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closed
+2023-01-20 00:58:26.223  INFO 10432 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:58:26.407  INFO 10432 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:58:27.553  INFO 10432 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:58:27.882  INFO 10432 --- [main] com.qiuyu.service.CommentServiceTest     : Started CommentServiceTest in 2.58 seconds (JVM running for 3.22)
+2023-01-20 00:58:28.070  INFO 3516 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 3516 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 00:58:28.071 DEBUG 3516 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 00:58:28.072  INFO 3516 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 00:58:28.107  INFO 3516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 00:58:28.107  INFO 3516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 00:58:28.820  INFO 3516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 00:58:28.821  INFO 3516 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 00:58:28.821  INFO 3516 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 00:58:28.821  INFO 3516 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 00:58:28.823  INFO 3516 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 00:58:28.828  INFO 3516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 00:58:28.828  INFO 3516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 00:58:28.876  INFO 3516 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 00:58:28.877  INFO 3516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 769 ms
+2023-01-20 00:58:28.947 DEBUG 10432 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 00:58:28.957  INFO 3516 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 00:58:28.966 DEBUG 10432 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 228(Integer)
+2023-01-20 00:58:28.981 DEBUG 10432 --- [main] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 00:58:28.986 DEBUG 10432 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==>  Preparing: SELECT id,user_id,entity_type,entity_id,target_id,content,status,create_time FROM comment WHERE (entity_type = ? AND entity_id = ?) LIMIT ?
+2023-01-20 00:58:28.986 DEBUG 10432 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : ==> Parameters: 1(Integer), 228(Integer), 2(Long)
+2023-01-20 00:58:28.989 DEBUG 10432 --- [main] com.qiuyu.dao.CommentMapper.selectPage   : <==      Total: 2
+2023-01-20 00:58:29.008  INFO 10432 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 00:58:29.012  INFO 10432 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 00:58:29.032  INFO 3516 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 00:58:29.661  INFO 3516 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 00:58:29.757  INFO 3516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 00:58:29.778  INFO 3516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 00:58:29.785  INFO 3516 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 2.037 seconds (JVM running for 2.815)
+2023-01-20 00:58:37.157  INFO 3516 --- [http-nio-80-exec-1] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-20 00:58:37.157  INFO 3516 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-20 00:58:37.158  INFO 3516 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-20 00:58:37.556 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 00:58:37.568 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 00:58:37.582 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 00:58:37.584 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:37.584 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:37.587 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:37.602 ERROR 3516 --- [http-nio-80-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/community] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No primary or single unique constructor found for interface com.baomidou.mybatisplus.core.metadata.IPage] with root cause
+
+java.lang.IllegalStateException: No primary or single unique constructor found for interface com.baomidou.mybatisplus.core.metadata.IPage
+	at org.springframework.beans.BeanUtils.getResolvableConstructor(BeanUtils.java:267) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:219) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:147) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_321]
+
+2023-01-20 00:58:37.606 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 00:58:37.606 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 00:58:37.607 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 00:58:37.608 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:37.608 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:37.609 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.622 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 00:58:44.622 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 00:58:44.623 DEBUG 3516 --- [http-nio-80-exec-1] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 00:58:44.623 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.624 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:44.625 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.645 DEBUG 3516 --- [http-nio-80-exec-1] c.q.d.D.selectPage_mpCount               : ==>  Preparing: SELECT COUNT(*) FROM discuss_post WHERE (status <> ?)
+2023-01-20 00:58:44.645 DEBUG 3516 --- [http-nio-80-exec-1] c.q.d.D.selectPage_mpCount               : ==> Parameters: 2(Integer)
+2023-01-20 00:58:44.646 DEBUG 3516 --- [http-nio-80-exec-1] c.q.d.D.selectPage_mpCount               : <==      Total: 1
+2023-01-20 00:58:44.649 DEBUG 3516 --- [http-nio-80-exec-1] c.q.dao.DiscussPostMapper.selectPage     : ==>  Preparing: SELECT id,user_id,title,content,type,status,create_time,comment_count,score FROM discuss_post WHERE (status <> ?) ORDER BY type DESC,create_time DESC LIMIT ?
+2023-01-20 00:58:44.650 DEBUG 3516 --- [http-nio-80-exec-1] c.q.dao.DiscussPostMapper.selectPage     : ==> Parameters: 2(Integer), 10(Long)
+2023-01-20 00:58:44.653 DEBUG 3516 --- [http-nio-80-exec-1] c.q.dao.DiscussPostMapper.selectPage     : <==      Total: 10
+2023-01-20 00:58:44.653 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.653 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 11(Integer)
+2023-01-20 00:58:44.654 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.654 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.654 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 111(Integer)
+2023-01-20 00:58:44.655 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.656 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.656 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:44.656 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.657 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.657 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 163(Integer)
+2023-01-20 00:58:44.657 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.658 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.658 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 00:58:44.659 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.659 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.659 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 00:58:44.660 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.660 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.660 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 00:58:44.661 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.662 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.662 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 00:58:44.663 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.664 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.664 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 00:58:44.665 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:44.666 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:44.666 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 00:58:44.667 DEBUG 3516 --- [http-nio-80-exec-1] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:49.664 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 00:58:49.665 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 00:58:49.666 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 00:58:49.666 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:49.666 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:49.667 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 00:58:49.668 ERROR 3516 --- [http-nio-80-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/community] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No primary or single unique constructor found for interface com.baomidou.mybatisplus.core.metadata.IPage] with root cause
+
+java.lang.IllegalStateException: No primary or single unique constructor found for interface com.baomidou.mybatisplus.core.metadata.IPage
+	at org.springframework.beans.BeanUtils.getResolvableConstructor(BeanUtils.java:267) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:219) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:147) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750) ~[javax.servlet-api-4.0.1.jar:4.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_321]
+
+2023-01-20 00:58:49.669 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 00:58:49.670 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 00:58:49.670 DEBUG 3516 --- [http-nio-80-exec-8] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 00:58:49.670 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 00:58:49.671 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 00:58:49.671 DEBUG 3516 --- [http-nio-80-exec-8] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:00:04.453  INFO 3516 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 01:00:04.455  INFO 3516 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 01:00:08.131  INFO 3312 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 3312 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 01:00:08.131 DEBUG 3312 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 01:00:08.132  INFO 3312 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 01:00:08.154  INFO 3312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 01:00:08.154  INFO 3312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 01:00:08.763  INFO 3312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 01:00:08.764  INFO 3312 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 01:00:08.764  INFO 3312 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 01:00:08.764  INFO 3312 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 01:00:08.767  INFO 3312 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 01:00:08.772  INFO 3312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 01:00:08.772  INFO 3312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 01:00:08.818  INFO 3312 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 01:00:08.819  INFO 3312 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2023-01-20 01:00:08.895  INFO 3312 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 01:00:08.963  INFO 3312 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 01:00:09.573  INFO 3312 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 01:00:09.659  INFO 3312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 01:00:09.681  INFO 3312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 01:00:09.689  INFO 3312 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 1.768 seconds (JVM running for 2.315)
+2023-01-20 01:00:12.818  INFO 3312 --- [http-nio-80-exec-1] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-20 01:00:12.818  INFO 3312 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-20 01:00:12.819  INFO 3312 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-20 01:00:14.451 DEBUG 3312 --- [http-nio-80-exec-3] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 01:00:14.463 DEBUG 3312 --- [http-nio-80-exec-3] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 01:00:14.482 DEBUG 3312 --- [http-nio-80-exec-3] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 01:00:14.484 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:00:14.484 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:00:14.486 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:00:14.505 DEBUG 3312 --- [http-nio-80-exec-3] c.q.dao.DiscussPostMapper.selectById     : ==>  Preparing: SELECT id,user_id,title,content,type,status,create_time,comment_count,score FROM discuss_post WHERE id=?
+2023-01-20 01:00:14.505 DEBUG 3312 --- [http-nio-80-exec-3] c.q.dao.DiscussPostMapper.selectById     : ==> Parameters: 287(Integer)
+2023-01-20 01:00:14.507 DEBUG 3312 --- [http-nio-80-exec-3] c.q.dao.DiscussPostMapper.selectById     : <==      Total: 1
+2023-01-20 01:00:14.507 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:00:14.507 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:00:14.508 DEBUG 3312 --- [http-nio-80-exec-3] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:00:14.526 DEBUG 3312 --- [http-nio-80-exec-3] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 01:00:14.526 DEBUG 3312 --- [http-nio-80-exec-3] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 287(Integer)
+2023-01-20 01:00:14.527 DEBUG 3312 --- [http-nio-80-exec-3] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 01:00:51.836 DEBUG 3312 --- [http-nio-80-exec-2] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 01:00:51.836 DEBUG 3312 --- [http-nio-80-exec-2] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 01:00:51.837 DEBUG 3312 --- [http-nio-80-exec-2] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 01:00:51.838 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:00:51.838 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:00:51.839 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:00:51.839 DEBUG 3312 --- [http-nio-80-exec-2] c.q.dao.DiscussPostMapper.selectById     : ==>  Preparing: SELECT id,user_id,title,content,type,status,create_time,comment_count,score FROM discuss_post WHERE id=?
+2023-01-20 01:00:51.839 DEBUG 3312 --- [http-nio-80-exec-2] c.q.dao.DiscussPostMapper.selectById     : ==> Parameters: 284(Integer)
+2023-01-20 01:00:51.840 DEBUG 3312 --- [http-nio-80-exec-2] c.q.dao.DiscussPostMapper.selectById     : <==      Total: 1
+2023-01-20 01:00:51.841 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:00:51.841 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 01:00:51.842 DEBUG 3312 --- [http-nio-80-exec-2] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:00:51.843 DEBUG 3312 --- [http-nio-80-exec-2] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 01:00:51.844 DEBUG 3312 --- [http-nio-80-exec-2] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 284(Integer)
+2023-01-20 01:00:51.844 DEBUG 3312 --- [http-nio-80-exec-2] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 01:01:28.776  INFO 3312 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 01:01:28.778  INFO 3312 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-20 01:03:40.736  INFO 10900 --- [restartedMain] com.qiuyu.CommunityApplication           : Starting CommunityApplication using Java 1.8.0_321 on DESKTOP-4DB8AAM with PID 10900 (D:\MyCode\IDEA\demo\target\classes started by qiuyu in D:\MyCode\IDEA\demo)
+2023-01-20 01:03:40.737 DEBUG 10900 --- [restartedMain] com.qiuyu.CommunityApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-20 01:03:40.737  INFO 10900 --- [restartedMain] com.qiuyu.CommunityApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-01-20 01:03:40.759  INFO 10900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 01:03:40.759  INFO 10900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 01:03:41.335  INFO 10900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-20 01:03:41.336  INFO 10900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-01-20 01:03:41.336  INFO 10900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2023-01-20 01:03:41.336  INFO 10900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2023-01-20 01:03:41.338  INFO 10900 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-01-20 01:03:41.344  INFO 10900 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-20 01:03:41.345  INFO 10900 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-01-20 01:03:41.390  INFO 10900 --- [restartedMain] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring embedded WebApplicationContext
+2023-01-20 01:03:41.390  INFO 10900 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 630 ms
+2023-01-20 01:03:41.465  INFO 10900 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-20 01:03:41.532  INFO 10900 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-20 01:03:42.133  INFO 10900 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-01-20 01:03:42.220  INFO 10900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-20 01:03:42.239  INFO 10900 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path '/community'
+2023-01-20 01:03:42.246  INFO 10900 --- [restartedMain] com.qiuyu.CommunityApplication           : Started CommunityApplication in 1.719 seconds (JVM running for 2.234)
+2023-01-20 01:03:45.696  INFO 10900 --- [http-nio-80-exec-1] o.a.c.c.C.[.[localhost].[/community]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-20 01:03:45.696  INFO 10900 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-20 01:03:45.697  INFO 10900 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-20 01:03:47.051 DEBUG 10900 --- [http-nio-80-exec-5] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 01:03:47.063 DEBUG 10900 --- [http-nio-80-exec-5] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 01:03:47.075 DEBUG 10900 --- [http-nio-80-exec-5] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 01:03:47.076 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.077 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:03:47.078 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.114 DEBUG 10900 --- [http-nio-80-exec-5] c.q.d.D.selectPage_mpCount               : ==>  Preparing: SELECT COUNT(*) FROM discuss_post WHERE (status <> ?)
+2023-01-20 01:03:47.114 DEBUG 10900 --- [http-nio-80-exec-5] c.q.d.D.selectPage_mpCount               : ==> Parameters: 2(Integer)
+2023-01-20 01:03:47.116 DEBUG 10900 --- [http-nio-80-exec-5] c.q.d.D.selectPage_mpCount               : <==      Total: 1
+2023-01-20 01:03:47.119 DEBUG 10900 --- [http-nio-80-exec-5] c.q.dao.DiscussPostMapper.selectPage     : ==>  Preparing: SELECT id,user_id,title,content,type,status,create_time,comment_count,score FROM discuss_post WHERE (status <> ?) ORDER BY type DESC,create_time DESC LIMIT ?
+2023-01-20 01:03:47.119 DEBUG 10900 --- [http-nio-80-exec-5] c.q.dao.DiscussPostMapper.selectPage     : ==> Parameters: 2(Integer), 10(Long)
+2023-01-20 01:03:47.123 DEBUG 10900 --- [http-nio-80-exec-5] c.q.dao.DiscussPostMapper.selectPage     : <==      Total: 10
+2023-01-20 01:03:47.123 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.123 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 11(Integer)
+2023-01-20 01:03:47.124 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.125 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.125 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 111(Integer)
+2023-01-20 01:03:47.125 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.126 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.126 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:03:47.127 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.127 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.127 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 163(Integer)
+2023-01-20 01:03:47.128 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.128 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.128 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 01:03:47.129 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.129 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.129 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 01:03:47.130 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.130 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.130 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 162(Integer)
+2023-01-20 01:03:47.131 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.131 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.131 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 01:03:47.132 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.132 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.132 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 01:03:47.133 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:47.133 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:47.133 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 149(Integer)
+2023-01-20 01:03:47.134 DEBUG 10900 --- [http-nio-80-exec-5] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:48.690 DEBUG 10900 --- [http-nio-80-exec-4] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==>  Preparing: SELECT id,user_id,ticket,status,expired FROM login_ticket WHERE (ticket = ?)
+2023-01-20 01:03:48.690 DEBUG 10900 --- [http-nio-80-exec-4] c.qiuyu.dao.LoginTicketMapper.selectOne  : ==> Parameters: fbbf926984de4ee89d2b469007b7bca7(String)
+2023-01-20 01:03:48.691 DEBUG 10900 --- [http-nio-80-exec-4] c.qiuyu.dao.LoginTicketMapper.selectOne  : <==      Total: 1
+2023-01-20 01:03:48.692 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:48.692 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:03:48.694 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:48.703 DEBUG 10900 --- [http-nio-80-exec-4] c.q.dao.DiscussPostMapper.selectById     : ==>  Preparing: SELECT id,user_id,title,content,type,status,create_time,comment_count,score FROM discuss_post WHERE id=?
+2023-01-20 01:03:48.703 DEBUG 10900 --- [http-nio-80-exec-4] c.q.dao.DiscussPostMapper.selectById     : ==> Parameters: 287(Integer)
+2023-01-20 01:03:48.704 DEBUG 10900 --- [http-nio-80-exec-4] c.q.dao.DiscussPostMapper.selectById     : <==      Total: 1
+2023-01-20 01:03:48.705 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : ==>  Preparing: SELECT id,username,password,salt,email,type,status,activation_code,header_url,create_time FROM user WHERE id=?
+2023-01-20 01:03:48.705 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : ==> Parameters: 164(Integer)
+2023-01-20 01:03:48.706 DEBUG 10900 --- [http-nio-80-exec-4] com.qiuyu.dao.UserMapper.selectById      : <==      Total: 1
+2023-01-20 01:03:48.708 DEBUG 10900 --- [http-nio-80-exec-4] c.q.d.CommentMapper.selectPage_mpCount   : ==>  Preparing: SELECT COUNT(*) FROM comment WHERE (entity_type = ? AND entity_id = ?)
+2023-01-20 01:03:48.708 DEBUG 10900 --- [http-nio-80-exec-4] c.q.d.CommentMapper.selectPage_mpCount   : ==> Parameters: 1(Integer), 287(Integer)
+2023-01-20 01:03:48.710 DEBUG 10900 --- [http-nio-80-exec-4] c.q.d.CommentMapper.selectPage_mpCount   : <==      Total: 1
+2023-01-20 01:03:48.710 DEBUG 10900 --- [http-nio-80-exec-4] c.q.controller.DiscussPostController     : []
+2023-01-20 01:05:31.009  INFO 10900 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-20 01:05:31.011  INFO 10900 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
