@@ -32,7 +32,10 @@ build/
 
 
 ### log ###
-.log
+*.log
+*.gz
+community.log
+community.log.2023-01-18.0.gz
 
 
 ### mvnw ###
