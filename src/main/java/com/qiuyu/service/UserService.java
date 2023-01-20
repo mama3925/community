@@ -48,6 +48,12 @@ public class UserService implements CommunityConstant {
         return userMapper.selectById(Integer.parseInt(id));
     }
 
+    public User findUserByName(String name) {
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.lambda().eq(User::getUsername,name);
+        return userMapper.selectOne(wrapper);
+    }
+
     /**
      * 注册账号
      *

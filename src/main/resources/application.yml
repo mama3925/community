@@ -36,6 +36,7 @@ spring:
     cache: false #关闭缓存
     check-template-location: false
 
+#mybatis-plus
 mybatis-plus:
   mapper-locations: "classpath*:/mapper/**/*.xml" #加载mapper
   type-aliases-package: "com.qiuyu.bean" #别名
