@@ -86,4 +86,17 @@ public class DiscussPostService {
     public DiscussPost findDiscussPostById(int id){
         return discussPostMapper.selectById(id);
     }
+
+    /**
+     * 根据帖子id修改帖子的评论数量
+     * @param id
+     * @param commentCount
+     * @return
+     */
+    public int updateCommentCount(int id, int commentCount) {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setId(id);
+        discussPost.setCommentCount(commentCount);
+        return discussPostMapper.updateById(discussPost);
+    }
 }

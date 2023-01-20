@@ -28,6 +28,12 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 分页获取所有帖子
+     * @param model
+     * @param page
+     * @return
+     */
     @GetMapping("/index")
     public String getIndexPage(Model model, MyPage<DiscussPost> page) {
         page.setSize(10);

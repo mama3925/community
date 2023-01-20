@@ -54,4 +54,8 @@ public class DiscussPostServiceTest {
 
     }
 
+    @Test
+    public void updateCommentCount() {
+        System.out.println(discussPostService.updateCommentCount(287, 1));
+    }
 }

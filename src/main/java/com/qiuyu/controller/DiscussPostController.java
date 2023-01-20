@@ -130,9 +130,9 @@ public class DiscussPostController implements CommunityConstant {
                         Map<String, Object> replyVo = new HashMap<>(10);
                         //回复
                         replyVo.put("reply",reply);
-                        //作者
-                        replyVo.put("user",user);
-                        //回复的目标
+                        //回复的作者
+                        replyVo.put("user",userService.findUserById(reply.getUserId().toString()));
+                        //回复给谁
                         User target = reply.getTargetId() == 0 ? null : userService.findUserById(reply.getTargetId().toString());
                         replyVo.put("target",target);
 
@@ -151,21 +151,6 @@ public class DiscussPostController implements CommunityConstant {
                 commentVoList.add(commentVo);
             }
         }
-
-//        for (Map<String, Object> commentVo : commentVoList) {
-//            Comment comment = (Comment) commentVo.get("comment");
-//            User user1 = (User) commentVo.get("user");
-//            int replyCount = (int) commentVo.get("replyCount");
-//            ArrayList<Map<String,Object>> replyVoList = (ArrayList<Map<String, Object>>) commentVo.get("reply");
-//            System.out.println("作者:"+user1.getUsername()+" 回复数:"+replyCount+" 内容:"+comment.getContent());
-//
-//            for (Map<String, Object> replyVo : replyVoList) {
-//                Comment reply = (Comment) replyVo.get("reply");
-//                User user2 = (User) replyVo.get("user");
-//
-//                System.out.println("\t作者:"+user2.getUsername()+" 内容:"+reply.getContent());
-//            }
-//        }
 
         model.addAttribute("comments",commentVoList);
         model.addAttribute("page",page);

@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -30,6 +32,20 @@ class CommentServiceTest {
     }
 
     @Test
-    void findCommentCount() {
+    public void findCommentCount() {
+        System.out.println(commentService.findCommentCount(1, 228));
+    }
+
+    @Test
+    public void addComment() {
+        Comment comment = new Comment();
+        comment.setUserId(162);
+        comment.setEntityType(1);
+        comment.setEntityId(287);
+        comment.setTargetId(0);
+        comment.setContent("回复测试");
+        comment.setStatus(0);
+        comment.setCreateTime(new Date());
+        System.out.println(commentService.addComment(comment));
     }
 }
