@@ -2,6 +2,7 @@ package com.qiuyu.controller;
 
 import com.qiuyu.annotation.LoginRequired;
 import com.qiuyu.bean.User;
+import com.qiuyu.service.LikeService;
 import com.qiuyu.service.UserService;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
@@ -43,6 +44,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private HostHolder hostHolder;
+    @Autowired
+    private LikeService likeService;
 
     /**
      * 跳转设置页面
@@ -165,5 +168,21 @@ public class UserController {
             return "/site/setting";
         }
     }
+
+    @GetMapping("/profile/{userId}")
+    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
+        User user = userService.findUserById(String.valueOf(userId));
+        if (user == null) {
+            throw new RuntimeException("该用户不存在！");
+        }
+        model.addAttribute("user", user);
+
+        // 进入某用户主页获取他(我)的点赞数量
+        int likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+
+        return "/site/profile";
+    }
+
 
 }

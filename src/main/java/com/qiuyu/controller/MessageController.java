@@ -42,6 +42,7 @@ public class MessageController {
     @GetMapping("/list")
     public String getLetterList(Model model, MyPage<Message> page) {
         User user = hostHolder.getUser();
+
         //分页信息
         page.setSize(5);
         page.setPath("/letter/list");
@@ -75,9 +76,19 @@ public class MessageController {
         return "/site/letter";
     }
 
+    /**
+     * 获取会话中的消息
+     * @param conversationId
+     * @param model
+     * @param page
+     * @return
+     */
     @LoginRequired
     @GetMapping("/detail/{conversationId}")
     public String getLetterDetail(@PathVariable("conversationId") String conversationId, Model model, MyPage<Message> page) {
+        //是否为会话中的用户
+
+
         //分页信息
         page.setSize(5);
         page.setPath("/letter/detail/" + conversationId);
@@ -124,6 +135,12 @@ public class MessageController {
         Integer id0 = Integer.parseInt(s[0]);
         Integer id1 = Integer.parseInt(s[1]);
 
+        //不是会话中的用户
+        int userId = hostHolder.getUser().getId();
+        if(userId != id0 && userId != id1){
+            throw new IllegalArgumentException("无权限查看");
+        }
+
         //当前用户是哪个就选另一个
         Integer target = hostHolder.getUser().getId().equals(id0) ? id1 : id0;
         return userService.findUserById(target.toString());
@@ -159,6 +176,7 @@ public class MessageController {
     @PostMapping("/send")
     @ResponseBody
     public String sendLetter(String toName, String content){
+
         //获得发送目标
         User target = userService.findUserByName(toName);
         if (target == null){

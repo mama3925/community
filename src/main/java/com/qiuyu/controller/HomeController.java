@@ -6,7 +6,9 @@ import com.qiuyu.bean.DiscussPost;
 import com.qiuyu.bean.MyPage;
 import com.qiuyu.bean.User;
 import com.qiuyu.service.DiscussPostService;
+import com.qiuyu.service.LikeService;
 import com.qiuyu.service.UserService;
+import com.qiuyu.utils.CommunityConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,11 +24,13 @@ import java.util.Map;
  * @create 2023-01-16 20:54
  */
 @Controller
-public class HomeController {
+public class HomeController implements CommunityConstant {
     @Autowired
     private DiscussPostService discussPostService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private LikeService likeService;
 
     /**
      * 分页获取所有帖子
@@ -51,6 +55,11 @@ public class HomeController {
                 User user = userService.findUserById(post.getUserId());
                 map.put("user", user);
                 discussPorts.add(map);
+
+                //点赞数
+                long entityLikeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
+                map.put("likeCount",entityLikeCount);
+
             }
         }
 
@@ -58,6 +67,15 @@ public class HomeController {
         model.addAttribute("page", page);
 
         return "/index";
+    }
+
+    /**
+     * 500错误页跳转
+     * @return
+     */
+    @GetMapping("/error")
+    public String getErrorPage(){
+        return "/error/500";
     }
 
 }
