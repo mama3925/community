@@ -49,15 +49,13 @@ public class UserService implements CommunityConstant {
     @Value("${server.servlet.context-path}")
     private String contextPath; //项目地址
 
-    public User findUserById(String id) {
+    public User findUserById(String userId) {
 //        return userMapper.selectById(Integer.parseInt(id));
         //优先从缓存中取值
-        User user = getCache(Integer.parseInt(id));
-        if(user == null){
-            //取不到时,从数据库中取,然后初始化缓存数据(redis存值)
-            initCache(Integer.parseInt(id));
+        User user = getCache(Integer.parseInt(userId));
+        if (user == null) {
+            user = initCache(Integer.parseInt(userId));
         }
-
         return user;
     }
 
