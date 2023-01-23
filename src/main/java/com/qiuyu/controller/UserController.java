@@ -68,7 +68,6 @@ public class UserController implements CommunityConstant {
      * @param model
      * @return
      */
-    @LoginRequired
     @PostMapping("/upload")
     public String uploadHeader(MultipartFile headerImage, Model model) {
         if (headerImage == null) {

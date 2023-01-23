@@ -7,8 +7,10 @@ import com.qiuyu.bean.User;
 import com.qiuyu.dao.LoginTicketMapper;
 import com.qiuyu.dao.UserMapper;
 import com.qiuyu.utils.CommunityUtil;
+import com.qiuyu.utils.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
@@ -22,11 +24,13 @@ import java.util.Map;
  */
 @Service
 public class LoginService {
-    @Autowired
-    private LoginTicketMapper loginTicketMapper;
+//    @Autowired
+//    private LoginTicketMapper loginTicketMapper;
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 登录
@@ -78,7 +82,13 @@ public class LoginService {
         ticket.setExpired(new Date(System.currentTimeMillis() + expiredSeconds * 1000));
         Date date = new Date();
 
-        loginTicketMapper.insert(ticket);
+        // 优化前：loginTicketMapper.insertLoginTicket(ticket);
+
+        // 优化后：loginticket对象放入redis中
+        String redisKey = RedisKeyUtil.getTicketKey(ticket.getTicket());
+        // opsForValue将ticket对象序列化为json字符串
+        redisTemplate.opsForValue().set(redisKey, ticket);
+
 
         map.put("ticket",ticket.getTicket());
         //map中能拿到ticket说明登录成功了
