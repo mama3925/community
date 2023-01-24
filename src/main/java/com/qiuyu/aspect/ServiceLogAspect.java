@@ -27,6 +27,10 @@ public class ServiceLogAspect {
         // 用户ip[1.2.3.4],在[时间],访问了[com.qiuyu.service.xxx()].
         // 通过RequestContextHolder工具类获取request
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        //加入消费者后,消费者也会调用service,消费者没有request,所以这里会空指针
+        if(attributes == null){
+            return;
+        }
         HttpServletRequest request = attributes.getRequest();
         // 通过request.getRemoteHost获取当前用户ip
         String ip = request.getRemoteHost();

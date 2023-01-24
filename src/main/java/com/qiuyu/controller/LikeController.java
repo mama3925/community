@@ -1,7 +1,11 @@
 package com.qiuyu.controller;
 
+import com.qiuyu.bean.Event;
 import com.qiuyu.bean.User;
+import com.qiuyu.event.EventProducer;
+import com.qiuyu.service.CommentService;
 import com.qiuyu.service.LikeService;
+import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
 import org.apache.catalina.Host;
@@ -20,16 +24,19 @@ import java.util.Map;
  * @create 2023-01-22 23:52
  */
 @Controller
-public class LikeController {
+public class LikeController implements CommunityConstant {
     @Autowired
     private LikeService likeService;
 
     @Autowired
     private HostHolder hostHolder;
+    @Autowired
+    private EventProducer eventProducer;
 
     @PostMapping("/like")
     @ResponseBody
-    public String like(int entityType, int entityId,int entityUserId){
+    // 加了一个postId变量，对应的前端和js需要修改
+    public String like(int entityType, int entityId,int entityUserId, int postId){
         User user = hostHolder.getUser();
 
         // 点赞
@@ -42,6 +49,23 @@ public class LikeController {
         Map<String,Object> map = new HashMap<>();
         map.put("likeCount",entityLikeCount);
         map.put("likeStatus",entityLikeStatus);
+
+        /**
+         * 触发点赞事件
+         * 只有点赞完后，才会调用Kafka生产者，发送系统通知，取消点赞不会调用事件
+         */
+        if (entityLikeStatus == 1) {
+            Event event = new Event()
+                    .setTopic(TOPIC_LIKE)
+                    .setEntityId(entityId)
+                    .setEntityType(entityType)
+                    .setUserId(user.getId())
+                    .setEntityUserId(entityUserId)
+                    .setData("postId", postId);
+            // 注意：data里面存postId是因为点击查看后链接到具体帖子的页面
+
+            eventProducer.fireEvent(event);
+        }
 
         return CommunityUtil.getJSONString(0,null,map);
     }

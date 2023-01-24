@@ -16,6 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class MessageMapperTest {
+
     @Autowired MessageMapper messageMapper;
 
     @Test
@@ -53,5 +54,29 @@ public class MessageMapperTest {
     public void selectLetterUnreadCount() {
         int i = messageMapper.selectLetterUnreadCount(111, "111_112");
         System.out.println(i);
+    }
+
+    @Test
+    public void selectLatestNotice() {
+        Message message = messageMapper.selectLatestNotice(112, "comment");
+        System.out.println(message);
+    }
+
+    @Test
+    public void selectNoticeCount() {
+    }
+
+    @Test
+    public void selectNoticeUnreadCount() {
+    }
+
+    @Test
+    public void selectNotices() {
+        Page<Message> page = new Page<>(1, 10);
+        page = (Page<Message>) messageMapper.selectNotices(163,"follow",page);
+        page.getRecords().forEach(o->{
+            System.out.println(o);
+        });
+        System.out.println(page.getTotal());
     }
 }

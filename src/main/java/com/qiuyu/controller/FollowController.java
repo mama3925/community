@@ -1,7 +1,9 @@
 package com.qiuyu.controller;
 
+import com.qiuyu.bean.Event;
 import com.qiuyu.bean.MyPage;
 import com.qiuyu.bean.User;
+import com.qiuyu.event.EventProducer;
 import com.qiuyu.service.FollowService;
 import com.qiuyu.service.UserService;
 import com.qiuyu.utils.CommunityConstant;
@@ -28,6 +30,8 @@ public class FollowController implements CommunityConstant {
     private UserService userService;
     @Autowired
     private HostHolder hostHolder;
+    @Autowired
+    private EventProducer eventProducer;
 
 
     /**
@@ -40,6 +44,20 @@ public class FollowController implements CommunityConstant {
     @ResponseBody
     public String follow(int entityType, int entityId) {
         followService.follow(hostHolder.getUser().getId(), entityType, entityId);
+
+        /**
+         * 触发关注事件
+         * 关注完后，调用Kafka生产者，发送系统通知
+         */
+        Event event = new Event()
+                .setTopic(TOPIC_FOLLOW)
+                .setUserId(hostHolder.getUser().getId())
+                .setEntityType(entityType)
+                .setEntityId(entityId)
+                .setEntityUserId(entityId);
+        // 用户关注实体的id就是被关注的用户id->EntityId=EntityUserId
+        eventProducer.fireEvent(event);
+
         return CommunityUtil.getJSONString(0,"已关注");
     }
 

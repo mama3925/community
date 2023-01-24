@@ -35,7 +35,25 @@ public interface CommunityConstant {
     int ENTITY_TYPE_COMMENT = 2;
 
     /**
-     * User
+     * 实体类型:User
      */
     int ENTITY_TYPE_USER = 3;
+
+    /**
+     * Kafka主题: 评论
+     */
+    String TOPIC_COMMENT = "comment";
+    /**
+     * Kafka主题: 点赞
+     */
+    String TOPIC_LIKE = "like";
+    /**
+     * Kafka主题: 关注
+     */
+    String TOPIC_FOLLOW = "follow";
+    /**
+     * 系统用户ID
+     */
+    int SYSTEM_USER_ID = 1;
+
 }

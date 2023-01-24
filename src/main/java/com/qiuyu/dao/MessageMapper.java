@@ -66,4 +66,24 @@ public interface MessageMapper extends BaseMapper<Message> {
      * @return
      */
     int updateStatus(@Param("ids") List<Integer> ids,@Param("status") int status);
+
+
+    /**
+     * 查询某个主题最新通知
+     */
+    Message selectLatestNotice(@Param("userId")int userId, @Param("topic")String topic);
+    /**
+     * 查询某个主题通知个数
+     */
+    int selectNoticeCount(@Param("userId")int userId, @Param("topic")String topic);
+    /**
+     * 查询某个主题未读个数(topic可为null,若为null:查询所有类系统未读通知个数)
+     */
+    int selectNoticeUnreadCount(@Param("userId")int userId, @Param("topic")String topic);
+    /**
+     * 分页查询某个主题的详情
+     */
+    IPage<Message> selectNotices(@Param("userId")int userId, @Param("topic")String topic,
+                                 IPage<Message> page);
+
 }

@@ -93,6 +93,45 @@ public class MessageService {
         return messageMapper.updateStatus(ids, 1);
     }
 
+    /**
+     * 查询某个主题最新通知
+     * @param userId
+     * @param topic
+     * @return
+     */
+    public Message findLatestNotice(int userId, String topic) {
+        return messageMapper.selectLatestNotice(userId, topic);
+    }
+
+    /**
+     * 查询某个主题通知个数
+     * @param userId
+     * @param topic
+     * @return
+     */
+    public int findNoticeCount(int userId, String topic) {
+        return messageMapper.selectNoticeCount(userId, topic);
+    }
+
+    /**
+     * 查询某个主题未读个数(topic可为null,若为null:查询所有类系统未读通知个数)
+     * @param userId
+     * @param topic
+     * @return
+     */
+    public int findNoticeUnreadCount(int userId, String topic) {
+        return messageMapper.selectNoticeUnreadCount(userId, topic);
+    }
+
+    /**
+     * 分页查询某个主题的详情
+     * @param userId
+     * @param topic
+     * @return
+     */
+    public IPage<Message> findNotices(int userId, String topic,IPage<Message> page) {
+        return messageMapper.selectNotices(userId, topic, page);
+    }
 
 
 }

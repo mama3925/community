@@ -30,4 +30,15 @@ public class MessageServiceTest {
         System.out.println(page.getRecords());
         System.out.println(page.getTotal());
     }
+
+    @Test
+    public void findNotices(){
+        Page<Message> page = new Page<>(1, 10);
+        page = (Page<Message>) messageService.findNotices(163,"follow",page);
+        page.getRecords().forEach(o->{
+            System.out.println(o);
+        });
+        System.out.println(page.getTotal());
+
+    }
 }
