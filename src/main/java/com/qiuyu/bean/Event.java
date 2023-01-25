@@ -14,7 +14,9 @@ import java.util.Map;
 public class Event {
     // Kafka必要的主题变量
     private String topic;
+    //事件发起人
     private int userId;
+
     // 用户发起事件的实体类型（评论、点赞、关注类型）
     private int entityType;
     // 用户发起事件的实体(帖子、评论、用户)id

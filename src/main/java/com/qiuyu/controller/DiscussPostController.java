@@ -3,10 +3,8 @@ package com.qiuyu.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.annotation.LoginRequired;
-import com.qiuyu.bean.Comment;
-import com.qiuyu.bean.DiscussPost;
-import com.qiuyu.bean.MyPage;
-import com.qiuyu.bean.User;
+import com.qiuyu.bean.*;
+import com.qiuyu.event.EventProducer;
 import com.qiuyu.service.CommentService;
 import com.qiuyu.service.DiscussPostService;
 import com.qiuyu.service.LikeService;
@@ -45,11 +43,11 @@ public class DiscussPostController implements CommunityConstant {
     private CommentService commentService;
     @Autowired
     private LikeService likeService;
-
+    @Autowired
+    private EventProducer eventProducer;
 
     /**
      * 添加帖子
-     *
      * @param title   标题
      * @param content 内容
      * @return
@@ -78,6 +76,15 @@ public class DiscussPostController implements CommunityConstant {
 
         //业务处理，将用户给的title，content进行处理并添加进数据库
         discussPostService.addDiscussPost(post);
+
+        //触发发帖事件,让消费者将帖子存入ElasticSearch
+        Event event = new Event()
+                .setTopic(TOPIC_PUBLISH)
+                .setUserId(user.getId())
+                .setEntityType(ENTITY_TYPE_POST)
+                .setEntityId(post.getId());
+        eventProducer.fireEvent(event);
+
 
         //返回Json格式字符串给前端JS,报错的情况将来统一处理
         return CommunityUtil.getJSONString(0, "发布成功！");

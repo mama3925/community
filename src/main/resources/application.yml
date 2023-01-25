@@ -56,7 +56,11 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
-
+  #ElasticSearch
+  data:
+    elasticsearch:
+      cluster-name: elastic
+      cluster-nodes: localhost:9300
 
 
 
@@ -78,6 +82,10 @@ logging:
     com.qiuyu: debug
   file:
     name: community.log
+
+
+
+
 
 
 # community
