@@ -40,7 +40,7 @@ public class MessageController implements CommunityConstant {
      * @param page
      * @return
      */
-    @LoginRequired
+//    @LoginRequired
     @GetMapping("/letter/list")
     public String getLetterList(Model model, MyPage<Message> page) {
         User user = hostHolder.getUser();
@@ -89,7 +89,7 @@ public class MessageController implements CommunityConstant {
      * @param page
      * @return
      */
-    @LoginRequired
+//    @LoginRequired
     @GetMapping("/letter/detail/{conversationId}")
     public String getLetterDetail(@PathVariable("conversationId") String conversationId, Model model, MyPage<Message> page) {
         //是否为会话中的用户

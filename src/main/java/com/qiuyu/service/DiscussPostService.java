@@ -99,4 +99,30 @@ public class DiscussPostService {
         discussPost.setCommentCount(commentCount);
         return discussPostMapper.updateById(discussPost);
     }
+
+    /**
+     * 修改帖子类型
+     * @param id
+     * @param type
+     * @return
+     */
+    public int updateType(int id, int type) {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setId(id);
+        discussPost.setType(type);
+        return discussPostMapper.updateById(discussPost);
+    }
+
+    /**
+     * 修改帖子状态
+     * @param id
+     * @param status
+     * @return
+     */
+    public int updateStatus(int id, int status) {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setId(id);
+        discussPost.setStatus(status);
+        return discussPostMapper.updateById(discussPost);
+    }
 }

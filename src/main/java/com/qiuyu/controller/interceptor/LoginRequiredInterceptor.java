@@ -35,6 +35,7 @@ public class LoginRequiredInterceptor implements HandlerInterceptor {
                 response.sendRedirect(request.getContextPath()+"/login");
                 return false;
             }
+            //
         }
 
         return true;
