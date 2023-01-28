@@ -21,13 +21,13 @@ public class DiscussPostServiceTest {
     private DiscussPostService discussPostService;
     @Test
     public void testFindDiscussPosts(){
-        int userId = 101;
+        int userId = 111;
 
         Page<DiscussPost> page = new Page<>();
         page.setSize(5);
         page.setCurrent(1);
 
-        page = (Page<DiscussPost>) discussPostService.findDiscussPosts(userId, page);
+        page = (Page<DiscussPost>) discussPostService.findDiscussPosts(userId, 1,page);
         List<DiscussPost> discussPosts = page.getRecords();
         discussPosts.forEach(System.out::println);
     }

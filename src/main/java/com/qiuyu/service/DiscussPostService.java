@@ -25,17 +25,20 @@ public class DiscussPostService {
     private SensitiveFilter sensitiveFilter;
 
     /**
-     * 查询不是被拉黑的帖子,并且userId不为0按照type排序
+     * 查询没被拉黑的帖子,并且userId不为0按照type排序
      * @param userId
-     * @Param page
+     * @param orderMode 0-最新 1-最热
+     * @param page
      * @return
      */
-    public IPage<DiscussPost> findDiscussPosts(int userId, IPage<DiscussPost> page) {
+    public IPage<DiscussPost> findDiscussPosts(int userId, int orderMode, IPage<DiscussPost> page) {
         LambdaQueryWrapper<DiscussPost> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper
                 .ne(DiscussPost::getStatus, 2)
                 .eq(userId != 0, DiscussPost::getUserId, userId)
-                .orderByDesc(DiscussPost::getType, DiscussPost::getCreateTime);
+                .orderBy(orderMode == 0, false, DiscussPost::getType, DiscussPost::getCreateTime)
+                .orderBy(orderMode == 1, false, DiscussPost::getType, DiscussPost::getScore, DiscussPost::getCreateTime);
+
         discussPostMapper.selectPage(page, queryWrapper);
         return page;
     }
@@ -43,6 +46,7 @@ public class DiscussPostService {
     /**
      * 查询帖子数量
      * userId=0查所有;userId!=0查个人发帖数
+     *
      * @param userId
      * @return
      */
@@ -58,11 +62,12 @@ public class DiscussPostService {
 
     /**
      * 新增一条帖子
+     *
      * @param post 帖子
      * @return
      */
-    public int addDiscussPost(DiscussPost post){
-        if(post == null){
+    public int addDiscussPost(DiscussPost post) {
+        if (post == null) {
             //不用map直接抛异常
             throw new IllegalArgumentException("参数不能为空！");
         }
@@ -75,20 +80,23 @@ public class DiscussPostService {
         post.setTitle(sensitiveFilter.filter(post.getTitle()));
         post.setContent(sensitiveFilter.filter(post.getContent()));
 
+
         return discussPostMapper.insert(post);
     }
 
     /**
      * 通过id查找帖子
+     *
      * @param id
      * @return
      */
-    public DiscussPost findDiscussPostById(int id){
+    public DiscussPost findDiscussPostById(int id) {
         return discussPostMapper.selectById(id);
     }
 
     /**
      * 根据帖子id修改帖子的评论数量
+     *
      * @param id
      * @param commentCount
      * @return
@@ -102,6 +110,7 @@ public class DiscussPostService {
 
     /**
      * 修改帖子类型
+     *
      * @param id
      * @param type
      * @return
@@ -115,6 +124,7 @@ public class DiscussPostService {
 
     /**
      * 修改帖子状态
+     *
      * @param id
      * @param status
      * @return
@@ -123,6 +133,13 @@ public class DiscussPostService {
         DiscussPost discussPost = new DiscussPost();
         discussPost.setId(id);
         discussPost.setStatus(status);
+        return discussPostMapper.updateById(discussPost);
+    }
+
+    public int updateScore(int postId, double score) {
+        DiscussPost discussPost = new DiscussPost();
+        discussPost.setId(postId);
+        discussPost.setScore(score);
         return discussPostMapper.updateById(discussPost);
     }
 }

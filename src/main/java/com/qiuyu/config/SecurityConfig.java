@@ -43,9 +43,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                         "/user/setting",
                         "/user/upload",
                         "/discuss/add",
-                        "/comment/add/* *",
-                        "/letter/* *",
-                        "/notice/* *",
+                        "/comment/add/**",
+                        "/letter/**",
+                        "/notice/**",
                         "/like",
                         "/follow",
                         "/unfollow"
@@ -65,9 +65,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                         AUTHORITY_ADMIN,
                         AUTHORITY_MODERATOR
                 )
-                // 授予管理员删除帖子权限
                 .antMatchers(
-                        "/discuss/delete"
+                        "/discuss/delete",// 授予管理员删除帖子权限
+                        "/data/**"
                 )
                 .hasAnyAuthority(
                         AUTHORITY_ADMIN

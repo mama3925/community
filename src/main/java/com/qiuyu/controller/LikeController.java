@@ -8,8 +8,10 @@ import com.qiuyu.service.LikeService;
 import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
+import com.qiuyu.utils.RedisKeyUtil;
 import org.apache.catalina.Host;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
@@ -32,6 +34,8 @@ public class LikeController implements CommunityConstant {
     private HostHolder hostHolder;
     @Autowired
     private EventProducer eventProducer;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @PostMapping("/like")
     @ResponseBody
@@ -65,6 +69,16 @@ public class LikeController implements CommunityConstant {
             // 注意：data里面存postId是因为点击查看后链接到具体帖子的页面
 
             eventProducer.fireEvent(event);
+        }
+
+
+        /**
+         * 计算帖子分数
+         * 将点赞过的帖子id存入set去重的redis集合------like()
+         */
+        if (entityType == ENTITY_TYPE_POST) {
+            String redisKey = RedisKeyUtil.getPostScore();
+            redisTemplate.opsForSet().add(redisKey, postId);
         }
 
         return CommunityUtil.getJSONString(0,null,map);

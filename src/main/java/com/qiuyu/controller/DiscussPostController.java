@@ -12,11 +12,13 @@ import com.qiuyu.service.UserService;
 import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
+import com.qiuyu.utils.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -45,6 +47,8 @@ public class DiscussPostController implements CommunityConstant {
     private LikeService likeService;
     @Autowired
     private EventProducer eventProducer;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * 添加帖子
@@ -72,6 +76,7 @@ public class DiscussPostController implements CommunityConstant {
         post.setContent(content);
         post.setType(0);
         post.setStatus(0);
+        post.setScore(0d);
         post.setCreateTime(new Date());
 
         //业务处理，将用户给的title，content进行处理并添加进数据库
@@ -84,6 +89,14 @@ public class DiscussPostController implements CommunityConstant {
                 .setEntityType(ENTITY_TYPE_POST)
                 .setEntityId(post.getId());
         eventProducer.fireEvent(event);
+
+        /**
+         * 计算帖子分数
+         * 将新发布的帖子id存入set去重的redis集合------addDiscussPost()
+         */
+        String redisKey = RedisKeyUtil.getPostScore();
+        redisTemplate.opsForSet().add(redisKey, post.getId());
+
 
 
         //返回Json格式字符串给前端JS,报错的情况将来统一处理
@@ -245,6 +258,13 @@ public class DiscussPostController implements CommunityConstant {
                 .setEntityType(ENTITY_TYPE_POST)
                 .setEntityId(id);
         eventProducer.fireEvent(event);
+
+        /**
+         * 计算帖子分数
+         * 将加精的帖子id存入set去重的redis集合-------setWonderful()
+         */
+        String redisKey = RedisKeyUtil.getPostScore();
+        redisTemplate.opsForSet().add(redisKey, id);
 
         return CommunityUtil.getJSONString(0, null, map);
     }

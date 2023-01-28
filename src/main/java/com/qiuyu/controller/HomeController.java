@@ -34,16 +34,18 @@ public class HomeController implements CommunityConstant {
 
     /**
      * 分页获取所有帖子
-     * @param model
+     * @param orderMode
      * @param page
+     * @param model
      * @return
      */
     @GetMapping("/index")
-    public String getIndexPage(Model model, MyPage<DiscussPost> page) {
+    public String getIndexPage(@RequestParam(name = "orderMode", defaultValue = "0") int orderMode,
+                               MyPage<DiscussPost> page, Model model) {
         page.setSize(10);
-        page.setPath("/index");
+        page.setPath("/index?orderMode="+orderMode);
         //查询到分页的结果
-        page = (MyPage<DiscussPost>) discussPostService.findDiscussPosts(0, page);
+        page = (MyPage<DiscussPost>) discussPostService.findDiscussPosts(0, orderMode, page);
 
         List<DiscussPost> list = page.getRecords();
         //因为这里查出来的是userid,而不是user对象,所以需要重新查出user
@@ -58,32 +60,36 @@ public class HomeController implements CommunityConstant {
 
                 //点赞数
                 long entityLikeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
-                map.put("likeCount",entityLikeCount);
+                map.put("likeCount", entityLikeCount);
 
             }
         }
 
         model.addAttribute("discussPorts", discussPorts);
+        model.addAttribute("orderMode",orderMode);
         model.addAttribute("page", page);
+
 
         return "/index";
     }
 
     /**
      * 500错误页跳转
+     *
      * @return
      */
     @GetMapping("/error")
-    public String getErrorPage(){
+    public String getErrorPage() {
         return "/error/500";
     }
 
     /**
      * 权限不足
+     *
      * @return
      */
     @GetMapping("/denied")
-    public String getDeniedPage(){
+    public String getDeniedPage() {
         return "/error/404";
     }
 }

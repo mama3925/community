@@ -8,6 +8,7 @@ import com.qiuyu.service.UserService;
 import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
+import com.qiuyu.utils.OSSUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +51,8 @@ public class UserController implements CommunityConstant {
     private HostHolder hostHolder;
     @Autowired
     private LikeService likeService;
+    @Autowired
+    private OSSUtil ossUtil;
 
     /**
      * 跳转设置页面
@@ -95,6 +98,7 @@ public class UserController implements CommunityConstant {
 
         //确定文件存放路径
         File dest = new File(uploadPath + "/" + filename);
+        //存入本地
         try {
             //将文件存入指定位置
             headerImage.transferTo(dest);
@@ -103,12 +107,21 @@ public class UserController implements CommunityConstant {
             throw new RuntimeException("上传文件失败，服务器发生异常！", e);
         }
 
+        //上传到阿里云OSS
+        String headerUrl = ossUtil.uploadFile(filename, dest);
+        System.out.println(headerUrl);
+        if(headerUrl == null){
+            logger.error("文件上传至云服务器失败！ ");
+            throw new RuntimeException("文件上传至云服务器失败！");
+        }
+
 
         //更新当前用户的头像的路径（web访问路径）
         //http://localhost:8080/community/user/header/xxx.png
         User user = hostHolder.getUser();
-        String headerUrl = domain + contextPath + "/user/header/" + filename;
+//        String headerUrl = domain + contextPath + "/user/header/" + filename;
         userService.updateHeaderUrl(user.getId(), headerUrl);
+
 
         return "redirect:/index";
     }
