@@ -14,6 +14,7 @@ import com.qiuyu.utils.SensitiveFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
+import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -114,6 +115,7 @@ public class DiscussPostService {
                 .orderBy(orderMode == 1, false, DiscussPost::getType, DiscussPost::getScore, DiscussPost::getCreateTime);
 
         discussPostMapper.selectPage(page, queryWrapper);
+
         return page;
     }
 
