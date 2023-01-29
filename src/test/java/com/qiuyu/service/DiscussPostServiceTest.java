@@ -3,6 +3,7 @@ package com.qiuyu.service;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.bean.DiscussPost;
+import com.qiuyu.bean.MyPage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +24,11 @@ public class DiscussPostServiceTest {
     public void testFindDiscussPosts(){
         int userId = 111;
 
-        Page<DiscussPost> page = new Page<>();
+        MyPage<DiscussPost> page = new MyPage<>();
         page.setSize(5);
         page.setCurrent(1);
 
-        page = (Page<DiscussPost>) discussPostService.findDiscussPosts(userId, 1,page);
+        page =  discussPostService.findDiscussPosts(userId, 1,page);
         List<DiscussPost> discussPosts = page.getRecords();
         discussPosts.forEach(System.out::println);
     }

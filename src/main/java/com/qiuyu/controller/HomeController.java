@@ -45,7 +45,7 @@ public class HomeController implements CommunityConstant {
         page.setSize(10);
         page.setPath("/index?orderMode="+orderMode);
         //查询到分页的结果
-        page = (MyPage<DiscussPost>) discussPostService.findDiscussPosts(0, orderMode, page);
+        page = discussPostService.findDiscussPosts(0, orderMode, page);
 
         List<DiscussPost> list = page.getRecords();
         //因为这里查出来的是userid,而不是user对象,所以需要重新查出user

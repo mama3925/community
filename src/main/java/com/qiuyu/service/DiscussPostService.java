@@ -4,34 +4,108 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.github.benmanes.caffeine.cache.CacheLoader;
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.LoadingCache;
 import com.qiuyu.bean.DiscussPost;
+import com.qiuyu.bean.MyPage;
 import com.qiuyu.dao.DiscussPostMapper;
 import com.qiuyu.utils.SensitiveFilter;
+import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author QiuYuSY
  * @create 2023-01-16 17:32
  */
+@Slf4j
 @Service
 public class DiscussPostService {
+
     @Autowired
     private DiscussPostMapper discussPostMapper;
     @Autowired
     private SensitiveFilter sensitiveFilter;
 
+    @Value("${caffeine.post.max-size}")
+    private int maxSize;
+    @Value("${caffeine.post.expire-seconds}")
+    private int expireSeconds;
+
+    // 帖子列表缓存
+    private LoadingCache<String, MyPage<DiscussPost>> postPageCache;
+
+    // 项目启动时初始化缓存
+    @PostConstruct
+    public void init() {
+        // 初始化帖子列表缓存
+        postPageCache = Caffeine.newBuilder()
+                .maximumSize(maxSize)
+                .expireAfterWrite(expireSeconds,TimeUnit.SECONDS)
+                .build(new CacheLoader<String, MyPage<DiscussPost>>(){
+                    @Override
+                    public @Nullable MyPage<DiscussPost> load(@NonNull String key) throws Exception {
+                        if (key == null || key.length() == 0) {
+                            throw new IllegalArgumentException("参数错误!");
+                        }
+                        String[] params = key.split(":");
+                        if (params == null || params.length != 3) {
+                            throw new IllegalArgumentException("参数错误!");
+                        }
+
+                        //拆分key
+                        int current = Integer.valueOf(params[0]);
+                        int size = Integer.valueOf(params[1]);
+                        String path = params[2];
+
+                        // 这里可用二级缓存：Redis -> mysql
+
+                        //本地缓存中查不到,从数据库中查询,查到后会自动存入本地缓存
+                        log.debug("正在从数据库加载热门帖子总数！");
+                        MyPage<DiscussPost> page = new MyPage<>();
+                        page.setCurrent(current);
+                        page.setSize(size);
+                        page.setPath(path);
+                        LambdaQueryWrapper<DiscussPost> queryWrapper = new LambdaQueryWrapper<>();
+                        queryWrapper
+                                .ne(DiscussPost::getStatus, 2)
+                                .orderByDesc( DiscussPost::getType, DiscussPost::getScore, DiscussPost::getCreateTime);
+
+                        discussPostMapper.selectPage(page, queryWrapper);
+
+                        return page;
+                    }
+                });
+    }
+
+
     /**
      * 查询没被拉黑的帖子,并且userId不为0按照type排序
+     *
      * @param userId
      * @param orderMode 0-最新 1-最热
      * @param page
      * @return
      */
-    public IPage<DiscussPost> findDiscussPosts(int userId, int orderMode, IPage<DiscussPost> page) {
+    public MyPage<DiscussPost> findDiscussPosts(int userId, int orderMode, MyPage<DiscussPost> page) {
+        //全部查询并且查的是热门帖子的话先去缓存查询
+        if (userId == 0 && orderMode == 1) {
+            //按照当前页和页面最大值作为Key查询
+            log.debug("正在从Caffeine缓存中加载热门帖子！");
+            return postPageCache.get(page.getCurrent()+":"+ page.getSize()+":"+ page.getPath());
+        }
+
+        log.debug("正在从数据库加载热门帖子总数！");
+        //从数据库中查
         LambdaQueryWrapper<DiscussPost> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper
                 .ne(DiscussPost::getStatus, 2)
