@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 80
   servlet:
     context-path: /community #项目地址
 
@@ -8,7 +8,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/community?serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://localhost:3306/community?serverTimezone=Asia/Shanghai&useSSL=false
       username: root
       password: qiuyu
       max-active: 15
@@ -37,11 +37,13 @@ spring:
     check-template-location: false
 
 
+
   #redis
   redis:
     database: 11 #16个库用哪个
     host: localhost
     port: 6379
+    timeout: 5000
 
   #kafka
   kafka:
@@ -139,5 +141,5 @@ management:
 # community
 community:
   path:
-    domain: http://192.168.222.128:8080
+    domain: http://192.168.222.128:80
     upload-path: /tmp/upload

@@ -55,7 +55,7 @@ public class LoginController implements CommunityConstant {
      */
     @GetMapping("/register")
     public String getRegisterPage() {
-        return "/site/register";
+        return "site/register";
     }
 
     /**
@@ -64,7 +64,7 @@ public class LoginController implements CommunityConstant {
      */
     @GetMapping("/login")
     public String getLoginPage() {
-        return "/site/login";
+        return "site/login";
     }
 
     /**
@@ -78,13 +78,13 @@ public class LoginController implements CommunityConstant {
             //注册成功,跳转到中转页面
             model.addAttribute("msg","注册成功,我们已经向您的邮件发送了一封激活邮件,请尽快激活！");
             model.addAttribute("target","/index");
-            return "/site/operate-result";
+            return "site/operate-result";
         }else{
             //注册失败,重新注册
             model.addAttribute("usernameMsg",map.get("usernameMsg"));
             model.addAttribute("passwordMsg",map.get("passwordMsg"));
             model.addAttribute("emailMsg",map.get("emailMsg"));
-            return "/site/register";
+            return "site/register";
         }
     }
 
@@ -110,7 +110,7 @@ public class LoginController implements CommunityConstant {
             model.addAttribute("msg","激活失败,你提供的激活码不正确！");
             model.addAttribute("target","/index");
         }
-        return "/site/operate-result";
+        return "site/operate-result";
     }
 
     /**
@@ -201,7 +201,7 @@ public class LoginController implements CommunityConstant {
             //登陆失败
             model.addAttribute("usernameMsg",map.get("usernameMsg"));
             model.addAttribute("passwordMsg",map.get("passwordMsg"));
-            return "/site/login";
+            return "site/login";
         }
 
     }

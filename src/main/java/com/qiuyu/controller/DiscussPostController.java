@@ -205,7 +205,7 @@ public class DiscussPostController implements CommunityConstant {
         model.addAttribute("comments", commentVoList);
         model.addAttribute("page", page);
 
-        return "/site/discuss-detail";
+        return "site/discuss-detail";
     }
 
 

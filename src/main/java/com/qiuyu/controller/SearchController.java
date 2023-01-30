@@ -63,7 +63,7 @@ public class SearchController implements CommunityConstant {
 
         page.setPath("/search?keyword=" + keyword);
 
-        return "/site/search";
+        return "site/search";
     }
 
 

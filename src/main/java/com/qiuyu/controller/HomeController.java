@@ -70,7 +70,7 @@ public class HomeController implements CommunityConstant {
         model.addAttribute("page", page);
 
 
-        return "/index";
+        return "index";
     }
 
     /**
@@ -80,7 +80,7 @@ public class HomeController implements CommunityConstant {
      */
     @GetMapping("/error")
     public String getErrorPage() {
-        return "/error/500";
+        return "error/500";
     }
 
     /**
@@ -90,6 +90,6 @@ public class HomeController implements CommunityConstant {
      */
     @GetMapping("/denied")
     public String getDeniedPage() {
-        return "/error/404";
+        return "error/404";
     }
 }

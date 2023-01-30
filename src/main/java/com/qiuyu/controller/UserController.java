@@ -61,7 +61,7 @@ public class UserController implements CommunityConstant {
     @LoginRequired
     @GetMapping("/setting")
     public String getUserPage() {
-        return "/site/setting";
+        return "site/setting";
     }
 
     /**
@@ -75,7 +75,7 @@ public class UserController implements CommunityConstant {
     public String uploadHeader(MultipartFile headerImage, Model model) {
         if (headerImage == null) {
             model.addAttribute("error", "您还没有选择图片！");
-            return "/site/setting";
+            return "site/setting";
         }
 
         /*
@@ -90,7 +90,7 @@ public class UserController implements CommunityConstant {
         //任何文件都可以上传,根据业务在此加限制.这里为没有后缀不合法
         if (StringUtils.isBlank(suffix) || index < 0) {
             model.addAttribute("error", "文件格式不正确！");
-            return "/site/setting";
+            return "site/setting";
         }
 
         //生成随机文件名
@@ -181,7 +181,7 @@ public class UserController implements CommunityConstant {
             //失败
             model.addAttribute("oldPasswordMsg",map.get("oldPasswordMsg"));
             model.addAttribute("newPasswordMsg",map.get("newPasswordMsg"));
-            return "/site/setting";
+            return "site/setting";
         }
     }
 
@@ -216,7 +216,7 @@ public class UserController implements CommunityConstant {
         }
         model.addAttribute("hasFollowed", hasFollowed);
 
-        return "/site/profile";
+        return "site/profile";
     }
 
 
