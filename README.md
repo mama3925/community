@@ -9,8 +9,8 @@ Spring Boot+Thymeleaf+Mybatis-Plus+Redis+Kafka+Elasticsearch+Spring Security+Qua
 - 使用Redis记录变动过的帖子，并使用Quartz定期对这些变动帖子计算热点分数，降低计算量
 - 使用Caffeine和Redis建立二级缓存避免缓存雪崩，将首页热门帖子的TPS从60提升到762
 # 博客
-## [仿牛客论坛项目(上)](https://blog.csdn.net/QiuYuSy/article/details/128783892)
-## [仿牛客论坛项目(下)](https://blog.csdn.net/QiuYuSy/article/details/128739479)
+## [仿牛客论坛项目(上)](https://blog.csdn.net/QiuYuSy/article/details/128739479)
+## [仿牛客论坛项目(下)](https://blog.csdn.net/QiuYuSy/article/details/128783892)
 ## [Docker部署项目](https://blog.csdn.net/QiuYuSy/article/details/128809894)
 ## [项目遇到问题汇总](https://blog.csdn.net/QiuYuSy/article/details/128809861)
 
