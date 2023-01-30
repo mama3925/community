@@ -7,8 +7,8 @@ server:
 spring:
   datasource:
     druid:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.222.128:3306/community?serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/community?serverTimezone=Asia/Shanghai
       username: root
       password: qiuyu
       max-active: 15
