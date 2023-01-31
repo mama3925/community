@@ -10,7 +10,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3307/community?serverTimezone=Asia/Shanghai
       username: root
-      password: qiuyu
+      password: ******
       max-active: 15
       min-idle: 5
       removeAbandonedTimeout: 120 # 2分钟
@@ -23,7 +23,7 @@ spring:
     #发送邮件者信箱（也就是你申请POP3/SMTP服务的QQ号）
     username: 2448567284@qq.com
     #申请PO3/SMTP服务时，给我们的邮箱的授权码
-    password: jzzyzfazhsardhgh
+    password: ******
     default-encoding: UTF-8
     protocol: smtp
     properties:
@@ -117,8 +117,8 @@ aliyun:
   oss:
     file:
       end-point: "https://oss-cn-hangzhou.aliyuncs.com"
-      access-key-id: "LTAI5tQpZ7UhBZHsAE3aDMHu"
-      access-key-secret: "ak0qOIRVUJ0Oo7GiDgqjJDoM3kbHDW"
+      access-key-id: "******"
+      access-key-secret: "******"
       bucket-name: "qiuyusy-img" #bucket名字
       dir-name: "community"
 
