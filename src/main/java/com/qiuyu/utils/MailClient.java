@@ -30,21 +30,28 @@ public class MailClient {
     @Value("${spring.mail.username}")
     private String from;
 
+    /**
+     * 发送邮件
+     * @param to
+     * @param subject
+     * @param content
+     */
     public void sendMail(String to, String subject, String content) {
         try {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message);
-            //设置收发件人
+            // 设置收发件人
             helper.setFrom(from);
             helper.setTo(to);
-            //设置邮件
+
+            // 设置标题和内容
             helper.setSubject(subject);
-            helper.setText(content,true); //true表示支持html格式
-            //发送
+            helper.setText(content, true);
+
+            // 发送
             mailSender.send(helper.getMimeMessage());
         } catch (MessagingException e) {
-            logger.error("发送邮件失败" + e.getMessage());
-        } finally {
+            logger.error("发送邮件失败，{}", e.getMessage());
         }
     }
 }

@@ -19,15 +19,15 @@ public class MailClientTest {
 
     @Test
     public void testSendMail() {
-        String to = "2448567284@qq.com";
+        String to = "2640564184@qq.com";
         String subject = "测试邮件";
-        String content = "测试邮件内容";
+        String content = "测试邮件内容如下";
         mailClient.sendMail(to, subject, content);
     }
 
     @Test
     public void testSendHtmlMail() {
-        String to = "2448567284@qq.com";
+        String to = "2640564184@qq.com";
         String subject = "测试邮件";
 
         //创建数据
