@@ -1,18 +1,14 @@
 package com.qiuyu.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qiuyu.bean.DiscussPost;
 import com.qiuyu.bean.MyPage;
 import com.qiuyu.bean.User;
 import com.qiuyu.service.DiscussPostService;
-import com.qiuyu.service.LikeService;
 import com.qiuyu.service.UserService;
-import com.qiuyu.utils.CommunityConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,49 +20,45 @@ import java.util.Map;
  * @create 2023-01-16 20:54
  */
 @Controller
-public class HomeController implements CommunityConstant {
+public class HomeController {
+
     @Autowired
     private DiscussPostService discussPostService;
     @Autowired
     private UserService userService;
-    @Autowired
-    private LikeService likeService;
 
     /**
      * 分页获取所有帖子
-     * @param orderMode
-     * @param page
      * @param model
+     * @param page
      * @return
      */
     @GetMapping("/index")
-    public String getIndexPage(@RequestParam(name = "orderMode", defaultValue = "0") int orderMode,
-                               MyPage<DiscussPost> page, Model model) {
+    public String getIndexPage(Model model, MyPage<DiscussPost> page) {
+
         page.setSize(10);
-        page.setPath("/index?orderMode="+orderMode);
-        //查询到分页的结果
-        page = discussPostService.findDiscussPosts(0, orderMode, page);
+        page.setPath("/index");
 
-        List<DiscussPost> list = page.getRecords();
-        //因为这里查出来的是userid,而不是user对象,所以需要重新查出user
-        List<Map<String, Object>> discussPorts = new ArrayList<>();
-        if (list != null) {
-            for (DiscussPost post : list) {
-                Map<String, Object> map = new HashMap<>(15);
-                map.put("post", post);
-                User user = userService.findUserById(post.getUserId());
-                map.put("user", user);
-                discussPorts.add(map);
+        // 查询到分页的结果
+        page = (MyPage<DiscussPost>) discussPostService.findDiscussPosts(0, page);
 
-                //点赞数
-                long entityLikeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
-                map.put("likeCount", entityLikeCount);
+        List<DiscussPost> list = page.getRecords(); // 获取所有帖子
+        // 这里查了所有帖子，以此能得到所有userId，再去查用户DAO
 
-            }
+        List<Map<String, Object>> discussPosts = new ArrayList<>();
+        if (list == null) {
+            model.addAttribute("discussPosts", discussPosts);
+            model.addAttribute("page", page);
+            return "/index"; // 提前返回
         }
-
-        model.addAttribute("discussPorts", discussPorts);
-        model.addAttribute("orderMode",orderMode);
+        for (DiscussPost discussPost : list) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("post", discussPost);
+            User user = userService.findUserById(discussPost.getUserId());
+            map.put("user", user);
+            discussPosts.add(map);
+        }
+        model.addAttribute("discussPosts", discussPosts);
         model.addAttribute("page", page);
 
 

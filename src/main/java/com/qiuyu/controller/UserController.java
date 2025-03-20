@@ -2,13 +2,13 @@ package com.qiuyu.controller;
 
 import com.qiuyu.annotation.LoginRequired;
 import com.qiuyu.bean.User;
-import com.qiuyu.service.FollowService;
-import com.qiuyu.service.LikeService;
+//import com.qiuyu.service.FollowService;
+//import com.qiuyu.service.LikeService;
 import com.qiuyu.service.UserService;
 import com.qiuyu.utils.CommunityConstant;
 import com.qiuyu.utils.CommunityUtil;
 import com.qiuyu.utils.HostHolder;
-import com.qiuyu.utils.OSSUtil;
+//import com.qiuyu.utils.OSSUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,14 +45,10 @@ public class UserController implements CommunityConstant {
 
     @Autowired
     private UserService userService;
-    @Autowired
-    private FollowService followService;
+
     @Autowired
     private HostHolder hostHolder;
-    @Autowired
-    private LikeService likeService;
-    @Autowired
-    private OSSUtil ossUtil;
+
 
     /**
      * 跳转设置页面
@@ -107,19 +103,19 @@ public class UserController implements CommunityConstant {
             throw new RuntimeException("上传文件失败，服务器发生异常！", e);
         }
 
-        //上传到阿里云OSS
-        String headerUrl = ossUtil.uploadFile(filename, dest);
-        System.out.println(headerUrl);
-        if(headerUrl == null){
-            logger.error("文件上传至云服务器失败！ ");
-            throw new RuntimeException("文件上传至云服务器失败！");
-        }
+//        //上传到阿里云OSS
+//        String headerUrl = ossUtil.uploadFile(filename, dest);
+//        System.out.println(headerUrl);
+//        if(headerUrl == null){
+//            logger.error("文件上传至云服务器失败！ ");
+//            throw new RuntimeException("文件上传至云服务器失败！");
+//        }
 
 
         //更新当前用户的头像的路径（web访问路径）
         //http://localhost:8080/community/user/header/xxx.png
         User user = hostHolder.getUser();
-//        String headerUrl = domain + contextPath + "/user/header/" + filename;
+        String headerUrl = domain + contextPath + "/user/header/" + filename;
         userService.updateHeaderUrl(user.getId(), headerUrl);
 
 
@@ -184,40 +180,5 @@ public class UserController implements CommunityConstant {
             return "/site/setting";
         }
     }
-
-    /**
-     * 跳转到个人主页
-     * @param userId
-     * @param model
-     * @return
-     */
-    @GetMapping("/profile/{userId}")
-    public String getProfilePage(@PathVariable("userId") int userId, Model model) {
-        User user = userService.findUserById(String.valueOf(userId));
-        if (user == null) {
-            throw new RuntimeException("该用户不存在！");
-        }
-        model.addAttribute("user", user);
-
-        // 进入某用户主页获取他(我)的点赞数量
-        int likeCount = likeService.findUserLikeCount(userId);
-        model.addAttribute("likeCount", likeCount);
-
-        // 关注数量(这里只考虑关注用户类型的情况)
-        long followeeCount = followService.findFolloweeCount(userId, ENTITY_TYPE_USER);
-        model.addAttribute("followeeCount", followeeCount);
-        // 粉丝数量
-        long followerCount = followService.findFollowerCount(ENTITY_TYPE_USER, userId);
-        model.addAttribute("followerCount", followerCount);
-        // 是否已关注 (必须是用户登录的情况)
-        boolean hasFollowed = false;
-        if (hostHolder.getUser() != null) {
-            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), ENTITY_TYPE_USER, userId);
-        }
-        model.addAttribute("hasFollowed", hasFollowed);
-
-        return "/site/profile";
-    }
-
 
 }

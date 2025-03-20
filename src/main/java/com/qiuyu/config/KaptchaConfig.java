@@ -21,7 +21,7 @@ public class KaptchaConfig {
          * 手动创建properties.xml配置文件对象*
          * 设置验证码图片的样式，大小，高度，边框，字体等
          */
-        Properties properties=new Properties();
+        Properties properties = new Properties();
         properties.setProperty("kaptcha.border", "yes");
         properties.setProperty("kaptcha.border.color", "105,179,90");
         properties.setProperty("kaptcha.textproducer.font.color", "black");
@@ -34,8 +34,8 @@ public class KaptchaConfig {
         properties.setProperty("kaptcha.noise.impl", "com.google.code.kaptcha.impl.NoNoise"); //是否干扰
 
 
-        DefaultKaptcha Kaptcha=new DefaultKaptcha();
-        Config config=new Config(properties);
+        DefaultKaptcha Kaptcha = new DefaultKaptcha();
+        Config config = new Config(properties);
         Kaptcha.setConfig(config);
 
         return Kaptcha;
