@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -15,7 +16,9 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginTicket {
+public class LoginTicket implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private Integer id;
     private Integer userId;
     private String ticket;
